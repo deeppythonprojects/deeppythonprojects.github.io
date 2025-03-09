@@ -150,8 +150,120 @@
   transform: scale(1.05);
   border-color: #000000; /* Subtle highlight */
 }
+.service-card {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 30px;
+    text-align: center;
+    min-height: 280px; /* Ensures equal height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
 
-      
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.05));
+    z-index: 0;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+  }
+
+  /* Icon Styling */
+  .service-icon {
+    font-size: 40px;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  .service-card:hover .service-icon {
+    color: #ffffff;
+  }
+
+  /* Text Styling */
+  .service-card h5 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+    z-index: 1;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+    z-index: 1;
+  }
+
+  .service-card:hover p {
+    color: white;
+  }
+
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .service-card {
+      min-height: 260px;
+    }
+  }
+        /* Colors */
+  .text-orange { color: orange !important; }
+  .text-green { color: green !important; }
+  .text-black { color: black !important; }
+
+  /* Hover Effect */
+  .custom-hover {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .custom-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .col-sm-10 {
+      width: 100%;
+    }
+  }
+  .text-gradient {
+    background: linear-gradient(45deg, #28a745, #17a2b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Hover Effect */
+  .info i {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .info:hover i {
+    transform: scale(1.2);
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .col-md-6 {
+      text-align: center;
+    }
+  }
         </style>
       
 </head>
@@ -256,8 +368,8 @@
                 </p>
                 
                 <div class="d-flex flex-wrap gap-3 mt-4">
-                  <a href="get-started.html" class="btn btn-lg btn-contact fw-bold px-4 py-2">Contact Us</a>
-                  <a href="read-more.html" class="btn btn-lg btn-know fw-bold px-4 py-2">Know More</a>
+                  <a href="#" class="btn btn-lg btn-contact fw-bold px-4 py-2">Contact Us</a>
+                  <a href="#" class="btn btn-lg btn-know fw-bold px-4 py-2">Know More</a>
                 </div>
               </div>
     
@@ -307,10 +419,10 @@
 </section>
 
 <!--Boasting End-->
-<!--Some More Start-->
 <section class="my-5 py-5">
   <div class="container">
     <div class="row align-items-center">
+      <!-- Rotating Card -->
       <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
         <div class="rotating-card-container">
           <div class="card card-rotate card-background card-background-mask-primary shadow-dark mt-md-0 mt-5">
@@ -318,371 +430,196 @@
               <div class="card-body py-7 text-center">
                 <i class="material-symbols-rounded text-white text-4xl my-3">touch_app</i>
                 <h3 class="text-white">Feel the <br /> Material Kit</h3>
-                <p class="text-white opacity-8">All the Bootstrap components that you need in a development have been re-design with the new look.</p>
+                <p class="text-white opacity-8">All the Bootstrap components that you need in a development have been re-designed with a new look.</p>
               </div>
             </div>
             <div class="back back-background" style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
               <div class="card-body pt-7 text-center">
                 <h3 class="text-white">Discover More</h3>
-                <p class="text-white opacity-8"> You will save a lot of time going from prototyping to full-functional code because all elements are implemented.</p>
+                <p class="text-white opacity-8">You will save a lot of time going from prototyping to full-functional code because all elements are implemented.</p>
                 <a href=".//sections/page-sections/hero-sections.html" target="_blank" class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Mission, Vision, and Values Section -->
       <div class="col-lg-6 ms-auto">
-        <div class="row justify-content-start">
-          <div class="col-md-6">
-            <div class="info">
-              <i class="material-symbols-rounded text-gradient text-success text-3xl">content_copy</i>
-              <h5 class="font-weight-bolder mt-3">Full Documentation</h5>
-              <p class="pe-5">Built by developers for developers. Check the foundation and you will find everything inside our documentation.</p>
+        <div class="row">
+          <!-- Mission -->
+          <div class="col-md-12 mb-4">
+            <div class="info d-flex align-items-center p-4 rounded shadow" style="backdrop-filter: blur(10px); background: rgba(255, 165, 0, 0.1);">
+              <i class="material-symbols-rounded text-orange text-3xl me-3">flag</i>
+              <div>
+                <h5 class="font-weight-bolder">Our Mission</h5>
+                <p>Building a high-quality organization delivering best-in-class services with integrity.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="info">
-              <i class="material-symbols-rounded text-gradient text-success text-3xl">flip_to_front</i>
-              <h5 class="font-weight-bolder mt-3">Bootstrap 5 Ready</h5>
-              <p class="pe-3">The world’s most popular front-end open source toolkit, featuring Sass variables and mixins.</p>
+          <!-- Vision -->
+          <div class="col-md-12 mb-4">
+            <div class="info d-flex align-items-center p-4 rounded shadow" style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.2);">
+              <i class="material-symbols-rounded rounded-circle p-2 text-3xl me-3">visibility</i>
+              <div>
+                <h5 class="font-weight-bolder">Our Vision</h5>
+                <p>To be a trusted partner in financial and management solutions, setting new industry standards.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row justify-content-start mt-5">
-          <div class="col-md-6 mt-3">
-            <i class="material-symbols-rounded text-gradient text-success text-3xl">price_change</i>
-            <h5 class="font-weight-bolder mt-3">Save Time & Money</h5>
-            <p class="pe-5">Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.</p>
-          </div>
-          <div class="col-md-6 mt-3">
-            <div class="info">
-              <i class="material-symbols-rounded text-gradient text-success text-3xl">devices</i>
-              <h5 class="font-weight-bolder mt-3">Fully Responsive</h5>
-              <p class="pe-3">Regardless of the screen size, the website content will naturally fit the given resolution.</p>
+          <!-- Values -->
+          <div class="col-md-12">
+            <div class="info d-flex align-items-center p-4 rounded shadow" style="backdrop-filter: blur(10px); background: rgba(0, 128, 0, 0.1);">
+              <i class="material-symbols-rounded text-success text-3xl me-3">handshake</i>
+              <div>
+                <h5 class="font-weight-bolder">Our Values</h5>
+                <p>Rooted in trust, ethics, and long-term partnerships, ensuring sustainable and proactive growth.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<section class="my-5 py-5">
-  <div class="container">
-    <div class="row">
-      <div class="row justify-content-center text-center my-sm-5">
-        <div class="col-lg-6">
-          <span class="badge bg-success mb-3">Infinite combinations</span>
-          <h2 class="text-dark mb-0">Huge collection of sections</h2>
-          <p class="lead">We have created multiple options for you to put together and customise into pixel perfect pages. </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container mt-sm-5 mt-3">
+
+<!-- START About Us Section -->
+<div class="container py-5">
+  <h2 class="text-center fw-bold text-dark mb-4">Know More About Us</h2>
+  <p class="text-center text-muted mb-5">We are committed to excellence, delivering world-class services with integrity and transparency.</p>
+
+  <div class="row justify-content-center">
     
-
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2" style="top: 100px">
-          <h3>Design Blocks</h3>
-          <h6 class="text-secondary font-weight-normal pe-3">A selection of page sections that fit perfectly in any combination</h6>
-        </div>
-      </div>
-      <div class="col-lg-9">
-        <div class="row mt-3">
-          <!-- Header -->
-<div class="col-12">
-  <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
-    <div class="container border-bottom">
-      <div class="row justify-space-between py-2">
-        <div class="col-lg-3 me-auto">
-          <p class="lead text-dark pt-1 mb-0">Header</p>
-        </div>
-        <div class="col-lg-3">
-          <div class="nav-wrapper position-relative end-0">
-            <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-header-1" role="tab" aria-controls="preview" aria-selected="true">
-                <i class="fas fa-desktop text-sm me-2"></i> Preview
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-header-1" role="tab" aria-controls="code" aria-selected="false">
-                  <i class="fas fa-code text-sm me-2"></i> Code
-                </a>
-              </li>
-            </ul>
-          </div>
+    <!-- Mission Card -->
+    <div class="col-md-4 col-sm-10 mb-4">
+      <div class="card text-center shadow-lg rounded-3 custom-hover">
+        <div class="card-body">
+          <i class="fas fa-bullseye fa-2x text-orange mb-3"></i>
+          <h5 class="fw-bold text-orange">Our Mission</h5>
+          <p class="text-muted">
+            We build a high-quality organization that delivers best-in-class services, ensuring value, compliance, and financial growth.
+          </p>
         </div>
       </div>
     </div>
-    <div class="tab-content tab-space">
-      <div class="tab-pane active" id="preview-header-1">
-        <iframe width="100%" height="600px" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-          <script src="https://kit.fontawesome.com/84e7f8bcbd.js" crossorigin="anonymous"></script>
-          <!-- Material Icons -->
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-          <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.1.0" rel="stylesheet" />
-          <!-- -------- START HEADER 1 w/ text and image on right ------- -->
-<header>
-  <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
-    <span class="mask bg-gradient-dark opacity-5"></span>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
-          <h1 class="text-white font-weight-black mb-4">Material Kit</h1>
-          <p class="text-white opacity-8 lead pe-5 me-5">The time is now for it be okay to be great. People in this world shun people for being nice. </p>
-          <div class="buttons">
-            <button type="button" class="btn btn-white mt-4">Get Started</button>
-            <button type="button" class="btn text-white shadow-none mt-4">Read more</button>
-          </div>
+
+    <!-- Vision Card -->
+    <div class="col-md-4 col-sm-10 mb-4">
+      <div class="card text-center shadow-lg rounded-3 custom-hover">
+        <div class="card-body">
+          <i class="fas fa-eye fa-2x text-black mb-3"></i>
+          <h5 class="fw-bold text-black">Our Vision</h5>
+          <p class="text-muted">
+            We aim to be a trusted partner in financial and management solutions, setting new industry benchmarks.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</header>
-<!-- -------- END HEADER 1 w/ text and image on right ------- -->
 
-          '></iframe>
-      </div>
-      <div class="tab-pane" id="code-header-1">
-        <div class="position-relative p-4 pb-2">
-          <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" type="button"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
-  <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="c">&lt;!-- -------- START HEADER 1 w/ text and image on right ------- --&gt;</span>
-<span class="nt">&lt;header&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header min-vh-100"</span> <span class="na">style=</span><span class="s">"background-image: url(&amp;#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80&amp;#39;);"</span> <span class="na">loading=</span><span class="s">"lazy"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mask bg-gradient-dark opacity-5"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 col-md-7 d-flex justify-content-center flex-column"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"text-white font-weight-black mb-4"</span><span class="nt">&gt;</span>Material Kit<span class="nt">&lt;/h1&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-white opacity-8 lead pe-5 me-5"</span><span class="nt">&gt;</span>The time is now for it be okay to be great. People in this world shun people for being nice. <span class="nt">&lt;/p&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-white mt-4"</span><span class="nt">&gt;</span>Get Started<span class="nt">&lt;/button&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn text-white shadow-none mt-4"</span><span class="nt">&gt;</span>Read more<span class="nt">&lt;/button&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-<span class="c">&lt;!-- -------- END HEADER 1 w/ text and image on right ------- --&gt;</span>
-
-  </code></pre></figure>
+    <!-- Values Card -->
+    <div class="col-md-4 col-sm-10 mb-4">
+      <div class="card text-center shadow-lg rounded-3 custom-hover">
+        <div class="card-body">
+          <i class="fas fa-handshake fa-2x text-green mb-3"></i>
+          <h5 class="fw-bold text-green">Our Values</h5>
+          <p class="text-muted">
+            Rooted in trust, ethics, and long-term partnerships, we ensure sustainable growth through proactive solutions.
+          </p>
         </div>
       </div>
     </div>
+
   </div>
 </div>
+<!-- END About Us Section -->
 
-        </div>
-        <div class="row mt-3">
-          <!-- Features -->
-<div class="col-12">
-  <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
-    <div class="container border-bottom">
-      <div class="row justify-space-between py-2">
-        <div class="col-lg-3 me-auto">
-          <p class="lead text-dark pt-1 mb-0">Features</p>
-        </div>
-        <div class="col-lg-3">
-          <div class="nav-wrapper position-relative end-0">
-            <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-features-1" role="tab" aria-controls="preview" aria-selected="true">
-                <i class="fas fa-desktop text-sm me-2"></i> Preview
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-features-1" role="tab" aria-controls="code" aria-selected="false">
-                  <i class="fas fa-code text-sm me-2"></i> Code
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tab-content tab-space">
-      <div class="tab-pane active" id="preview-features-1">
-        <iframe width="100%" height="600px" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-          <script src="https://kit.fontawesome.com/84e7f8bcbd.js" crossorigin="anonymous"></script>
-          <!-- Material Icons -->
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-          <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.1.0" rel="stylesheet" />
-          <!-- -------- START Features w/ icons and text on left & gradient title and text on right -------- -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6 my-auto">
-      <h3 class="mt-5 mt-lg-0">Read More About Us</h3>
-      <p class="pe-5">Pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.</p>
-      <a href="javascript:;" class="text-primary icon-move-right">More about us
-        <i class="fas fa-arrow-right text-sm ms-1"></i>
-      </a>
-    </div>
-    <div class="col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0">
-      <div class="p-3 info-horizontal">
-        <div class="icon icon-shape  bg-gradient-dark shadow-dark text-center">
-          <i class="fas fa-ship opacity-10"></i>
-        </div>
-        <div class="description ps-3">
-          <p class="mb-0">It becomes harder for us to give others a hand. <br> We get our heart broken by people we love.</p>
-        </div>
-      </div>
-
-      <div class="p-3 info-horizontal">
-        <div class="icon icon-shape  bg-gradient-dark shadow-dark text-center">
-          <i class="fas fa-handshake opacity-10"></i>
-        </div>
-        <div class="description ps-3">
-          <p class="mb-0">As we live, our hearts turn colder. <br>Cause pain is what we go through as we become older.</p>
-        </div>
-      </div>
-      <div class="p-3 info-horizontal">
-        <div class="icon icon-shape  bg-gradient-dark shadow-dark text-center">
-          <i class="fas fa-hourglass opacity-10"></i>
-        </div>
-        <div class="description ps-3">
-          <p class="mb-0">When we lose family over time. <br> What else could rust the heart more over time? Blackgold.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- -------- END Features w/ icons and text on left & gradient title and text on right -------- -->
-
-          '></iframe>
-      </div>
-      <div class="tab-pane" id="code-features-1">
-        <div class="position-relative p-4 pb-2">
-          <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" type="button"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
-  <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="c">&lt;!-- -------- START Features w/ icons and text on left &amp; gradient title and text on right -------- --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 my-auto"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"mt-5 mt-lg-0"</span><span class="nt">&gt;</span>Read More About Us<span class="nt">&lt;/h3&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"pe-5"</span><span class="nt">&gt;</span>Pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"text-primary icon-move-right"</span><span class="nt">&gt;</span>More about us
-        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-arrow-right text-sm ms-1"</span><span class="nt">&gt;&lt;/i&gt;</span>
-      <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-3 info-horizontal"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon-shape  bg-gradient-dark shadow-dark text-center"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-ship opacity-10"</span><span class="nt">&gt;&lt;/i&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description ps-3"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>It becomes harder for us to give others a hand. <span class="nt">&lt;br&gt;</span> We get our heart broken by people we love.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-3 info-horizontal"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon-shape  bg-gradient-dark shadow-dark text-center"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-handshake opacity-10"</span><span class="nt">&gt;&lt;/i&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description ps-3"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>As we live, our hearts turn colder. <span class="nt">&lt;br&gt;</span>Cause pain is what we go through as we become older.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-3 info-horizontal"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon-shape  bg-gradient-dark shadow-dark text-center"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-hourglass opacity-10"</span><span class="nt">&gt;&lt;/i&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description ps-3"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>When we lose family over time. <span class="nt">&lt;br&gt;</span> What else could rust the heart more over time? Blackgold.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="c">&lt;!-- -------- END Features w/ icons and text on left &amp; gradient title and text on right -------- --&gt;</span>
-
-  </code></pre></figure>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="py-5">
   <div class="container">
+    <div class="row text-center my-sm-5 mt-5">
+      <div class="col-lg-8 mx-auto">
+        <span class="badge bg-gradient-dark mb-3">Our Services</span>
+        <h2 class="mb-4 fw-bold">Services We Provide</h2>
+        <p class="lead text-muted">We offer tailored financial, taxation, and business advisory services to help you grow efficiently.</p>
+      </div>
+    </div>
+
     <div class="row">
-      <div class="row text-center my-sm-5 mt-5">
-        <div class="col-lg-6 mx-auto">
-          <span class="badge bg-success mb-3">Boost creativity</span>
-          <h2 class="">With our coded pages</h2>
-          <p class="lead">The easiest way to get started is to use one of our <br /> pre-built example pages. </p>
+      <!-- Service Cards -->
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-file-invoice-dollar service-icon"></i>
+          <h5>Income Tax Compliance</h5>
+          <p>Seamless tax filing, compliance, and assessment proceedings for individuals & businesses.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-receipt service-icon"></i>
+          <h5>GST Compliance & Returns</h5>
+          <p>Complete GST filing, compliance management, and audit assistance.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-hand-holding-usd service-icon"></i>
+          <h5>Project Financing</h5>
+          <p>End-to-end support for securing project funding and financial structuring.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-balance-scale service-icon"></i>
+          <h5>Company Law Matters</h5>
+          <p>Expert guidance in company registration, compliance, and corporate governance.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-calculator service-icon"></i>
+          <h5>Accounting & Bookkeeping</h5>
+          <p>Accurate bookkeeping, financial statements, and audit-ready reports.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-award service-icon"></i>
+          <h5>Govt. Subsidies & Registrations</h5>
+          <p>Assisting in availing government subsidies and handling legal registrations.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-file-contract service-icon"></i>
+          <h5>Statutory & Tax Audits</h5>
+          <p>Complete audit services for banks, companies, and tax compliance needs.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="service-card">
+          <i class="fas fa-lightbulb service-icon"></i>
+          <h5>Management Consultancy</h5>
+          <p>Business strategy and management consulting for operational efficiency.</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row mt-4">
-          <div class="col-md-6">
-            <a href="./pages/about-us.html">
-              <div class="card move-on-hover">
-                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/about-us.jpg" alt="aboutus">
-              </div>
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">About Us Page</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 mt-md-0 mt-5">
-            <a href="./pages/contact-us.html">
-              <div class="card move-on-hover">
-                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/contact-us.jpg" alt="contacus">
-              </div>
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Contact Us Page</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 mt-md-3 mt-6">
-            <a href="./pages/sign-in.html">
-              <div class="card move-on-hover">
-                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sign-in.jpg" alt="signin">
-              </div>
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Sign In Page</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 mt-md-3 mt-6">
-            <a href="./pages/author.html">
-              <div class="card move-on-hover">
-                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/author.jpg" alt="author">
-              </div>
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Author Page</h6>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mx-auto mt-md-0 mt-5">
-        <div class="position-sticky" style="top:100px !important">
-          <h4 class="">Presentation Pages for Company, Sign In Page, Author and Contact</h4>
-          <h6 class="text-secondary font-weight-normal">These is just a small selection of the multiple possibitilies you have. Focus on the business, not on the design.</h6>
-        </div>
-      </div>
-    </div>
+  <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-lg btn-contact fw-bold px-4 py-2">Explore our Services</a>
+  </div>
 </section>
+
 
 
 <!-- -------- START Content Presentation Docs ------- -->
