@@ -1,0 +1,1067 @@
+<!--
+=========================================================
+* Material Kit 3 - v3.1.0
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Copyright 2024 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/logo_1.jpg">
+
+    <title>
+        KAUSHIK S. SHETH & CO. CHARTERED ACCOUNTANTS
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/84e7f8bcbd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link id="pagestyle" href="./assets/css/material-kit.css?v=3.1.0" rel="stylesheet" />
+    <style>
+      /* Center navbar items in mobile view */
+      @media (max-width: 991px) {
+          .navbar-nav {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+          }
+          .nav-item {
+              width: 100%;
+              text-align: center;
+              position: relative;
+          }
+      }
+      
+      /* Hover underline effect for desktop */
+      @media (min-width: 992px) {
+          .nav-item .nav-link {
+              position: relative;
+              padding-bottom: 5px;
+              transition: color 0.3s ease-in-out;
+          }
+      
+          .nav-item .nav-link::after {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 100%;
+              height: 2px;
+              background-color:  rgba(20, 20, 171, 0.7);
+              transform: translateX(-50%) scaleX(0);
+              transform-origin: center;
+              transition: transform 0.3s ease-in-out;
+          }
+      
+          .nav-item .nav-link:hover::after {
+              transform: translateX(-50%) scaleX(1);
+          }
+      }
+      
+      /* Smaller underline for mobile */
+      @media (max-width: 991px) {
+          .nav-item .nav-link {
+              position: relative;
+              padding-bottom: 5px;
+          }
+      
+          .nav-item .nav-link:active::after,
+          .nav-item .nav-link:focus::after {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 40%;  /* Smaller underline */
+              height: 2px;
+              background-color: rgba(20, 20, 171, 0.7);
+              transform: translateX(-50%) scaleX(1);
+              transform-origin: center;
+          }
+      }
+      
+      .no-wrap {
+  display: inline-block; 
+  white-space: nowrap; /* Prevents breaking */
+}
+
+@media (max-width: 768px) { /* Mobile View */
+  .no-wrap {
+    white-space: normal; /* Allows breaking in mobile view */
+  }
+}
+
+      /* Contact Us Button - Modern Gradient & Glow */
+.btn-contact {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  ; /* Warm orange gradient */
+  color: rgb(0, 0, 0) !important;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-contact:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+  filter: brightness(1.1);
+}
+
+/* Know More Button - Border Animation */
+.btn-know {
+  border: 2px solid white;
+  color: white !important;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-know::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-know:hover::before {
+  left: 0;
+}
+
+.btn-know:hover {
+  transform: scale(1.05);
+  border-color: #000000; /* Subtle highlight */
+}
+
+      
+        </style>
+      
+</head>
+
+<body class="index-page bg-gray-200">
+<!-- Navbar -->
+ <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 p-2 start-0 end-0 mx-4">
+          <div class="container-fluid px-0">
+            <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.html">
+              <img src="./assets/img/MainLogo.png" class="img-fluid" alt="Responsive Logo" style="max-width: 215px; height: auto;">
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+              <ul class="navbar-nav ms-auto d-flex justify-content-center w-100">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#"><b>Home</b></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#"><b>About Us</b></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#"><b>Services</b></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#"><b>Blogs</b></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#"><b>Contact Us</b></a>
+                </li>
+              </ul>
+                <!-- Social Media Icons (Mobile) -->
+                <style>
+                .social-icon:hover {
+                  transform: scale(1.2);
+                  transition: transform 0.3s ease-in-out;
+                }
+                </style>
+                <div class="d-lg-none text-center mt-3">
+                  <a href="https://www.linkedin.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-linkedin fa-2x text-dark"></i></a>
+                  <a href="https://www.facebook.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+                  <a href="https://www.instagram.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-instagram fa-2x text-dark"></i></a>
+                  <a href="https://www.twitter.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-x-twitter fa-2x text-dark"></i></a>
+                </div>
+              <!-- Social Media Icons -->
+              <div class="d-none d-lg-flex ms-auto">
+                <a href="https://www.linkedin.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-linkedin fa-2x text-dark"></i></a>
+                <a href="https://www.facebook.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+                <a href="https://www.instagram.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-instagram fa-2x text-dark"></i></a>
+                <a href="https://www.twitter.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-x-twitter fa-2x text-dark"></i></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+    <!-- End Navbar -->
+
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+<!--HEADER START-->
+    <header class="header-2">
+      <div class="page-header min-vh-100 position-relative" style="background: url('./assets/img/bridge.jpg') center/cover no-repeat;" loading="lazy">
+        
+        <span class="mask bg-gradient-dark opacity-25 position-absolute w-100 h-100"></span>
+    
+        <div class="container position-relative z-index-1">
+          <div class="row">
+            <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column position-relative">
+    
+              <!-- Blurred Background Behind Text -->
+              <div class="blur-box p-4">
+                <h1 class="text-white font-weight-black mb-4">
+                  <span class="no-wrap">
+                    Accounting with Integrity<span style="color: orange;">.</span><span style="color: white;">.</span><span style="color: green;">.</span> 
+                    <br><span style="font-size: 0.8em;">Growth with Confidence<span style="color: orange;">.</span><span style="color: white;">.</span><span style="color: green;">.</span></span>
+                  </span>
+                </h1>
+                <p class="text-white opacity-8 lead pe-5 me-5">
+                  Expert accounting solutions tailored to your business success.
+                </p>
+                
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                  <a href="get-started.html" class="btn btn-lg btn-contact fw-bold px-4 py-2">Contact Us</a>
+                  <a href="read-more.html" class="btn btn-lg btn-know fw-bold px-4 py-2">Know More</a>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--HEADER END-->
+
+  
+<!--Boasting Start-->
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+
+<section class="pt-3 pb-4" id="count-stats">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 mx-auto py-3">
+        <div class="row">
+          <div class="col-md-4 position-relative">
+            <div class="p-3 text-center">
+              <h1 class="text-gradient text-dark"><span id="state1" countTo="50000">0</span>+</h1>
+              <h5 class="mt-3">Tax Fillings</h5>
+              <p class="text-sm font-weight-normal">Ensuring accuracy and compliance with expert tax preparation services.</p>
+            </div>
+            <hr class="vertical dark">
+          </div>
+          <div class="col-md-4 position-relative">
+            <div class="p-3 text-center">
+              <h1 class="text-gradient text-dark"> <span id="state2" countTo="30">0</span>+</h1>
+              <h5 class="mt-3">Years of Excellence</h5>
+              <p class="text-sm font-weight-normal">Delivering trusted financial and accounting solutions since 1994.</p>
+            </div>
+            <hr class="vertical dark">
+          </div>
+          <div class="col-md-4 position-relative">
+            <div class="p-3 text-center">
+              <h1 class="text-gradient text-dark"> <span id="state3" countTo="1000">0</span>+</h1>
+              <h5 class="mt-3">Clients Served</h5>
+              <p class="text-sm font-weight-normal">Building lasting relationships with businesses across India and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Boasting End-->
+<!--Some More Start-->
+<section class="my-5 py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
+        <div class="rotating-card-container">
+          <div class="card card-rotate card-background card-background-mask-primary shadow-dark mt-md-0 mt-5">
+            <div class="front front-background" style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
+              <div class="card-body py-7 text-center">
+                <i class="material-symbols-rounded text-white text-4xl my-3">touch_app</i>
+                <h3 class="text-white">Feel the <br /> Material Kit</h3>
+                <p class="text-white opacity-8">All the Bootstrap components that you need in a development have been re-design with the new look.</p>
+              </div>
+            </div>
+            <div class="back back-background" style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
+              <div class="card-body pt-7 text-center">
+                <h3 class="text-white">Discover More</h3>
+                <p class="text-white opacity-8"> You will save a lot of time going from prototyping to full-functional code because all elements are implemented.</p>
+                <a href=".//sections/page-sections/hero-sections.html" target="_blank" class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 ms-auto">
+        <div class="row justify-content-start">
+          <div class="col-md-6">
+            <div class="info">
+              <i class="material-symbols-rounded text-gradient text-success text-3xl">content_copy</i>
+              <h5 class="font-weight-bolder mt-3">Full Documentation</h5>
+              <p class="pe-5">Built by developers for developers. Check the foundation and you will find everything inside our documentation.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info">
+              <i class="material-symbols-rounded text-gradient text-success text-3xl">flip_to_front</i>
+              <h5 class="font-weight-bolder mt-3">Bootstrap 5 Ready</h5>
+              <p class="pe-3">The world’s most popular front-end open source toolkit, featuring Sass variables and mixins.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-start mt-5">
+          <div class="col-md-6 mt-3">
+            <i class="material-symbols-rounded text-gradient text-success text-3xl">price_change</i>
+            <h5 class="font-weight-bolder mt-3">Save Time & Money</h5>
+            <p class="pe-5">Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.</p>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="info">
+              <i class="material-symbols-rounded text-gradient text-success text-3xl">devices</i>
+              <h5 class="font-weight-bolder mt-3">Fully Responsive</h5>
+              <p class="pe-3">Regardless of the screen size, the website content will naturally fit the given resolution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="my-5 py-5">
+  <div class="container">
+    <div class="row">
+      <div class="row justify-content-center text-center my-sm-5">
+        <div class="col-lg-6">
+          <span class="badge bg-success mb-3">Infinite combinations</span>
+          <h2 class="text-dark mb-0">Huge collection of sections</h2>
+          <p class="lead">We have created multiple options for you to put together and customise into pixel perfect pages. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-sm-5 mt-3">
+    
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2" style="top: 100px">
+          <h3>Design Blocks</h3>
+          <h6 class="text-secondary font-weight-normal pe-3">A selection of page sections that fit perfectly in any combination</h6>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="row mt-3">
+          <!-- Header -->
+<div class="col-12">
+  <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+    <div class="container border-bottom">
+      <div class="row justify-space-between py-2">
+        <div class="col-lg-3 me-auto">
+          <p class="lead text-dark pt-1 mb-0">Header</p>
+        </div>
+        <div class="col-lg-3">
+          <div class="nav-wrapper position-relative end-0">
+            <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-header-1" role="tab" aria-controls="preview" aria-selected="true">
+                <i class="fas fa-desktop text-sm me-2"></i> Preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-header-1" role="tab" aria-controls="code" aria-selected="false">
+                  <i class="fas fa-code text-sm me-2"></i> Code
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content tab-space">
+      <div class="tab-pane active" id="preview-header-1">
+        <iframe width="100%" height="600px" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+          <script src="https://kit.fontawesome.com/84e7f8bcbd.js" crossorigin="anonymous"></script>
+          <!-- Material Icons -->
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+          <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.1.0" rel="stylesheet" />
+          <!-- -------- START HEADER 1 w/ text and image on right ------- -->
+<header>
+  <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-5"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+          <h1 class="text-white font-weight-black mb-4">Material Kit</h1>
+          <p class="text-white opacity-8 lead pe-5 me-5">The time is now for it be okay to be great. People in this world shun people for being nice. </p>
+          <div class="buttons">
+            <button type="button" class="btn btn-white mt-4">Get Started</button>
+            <button type="button" class="btn text-white shadow-none mt-4">Read more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+
+          '></iframe>
+      </div>
+      <div class="tab-pane" id="code-header-1">
+        <div class="position-relative p-4 pb-2">
+          <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" type="button"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+  <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="c">&lt;!-- -------- START HEADER 1 w/ text and image on right ------- --&gt;</span>
+<span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header min-vh-100"</span> <span class="na">style=</span><span class="s">"background-image: url(&amp;#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80&amp;#39;);"</span> <span class="na">loading=</span><span class="s">"lazy"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mask bg-gradient-dark opacity-5"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 col-md-7 d-flex justify-content-center flex-column"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"text-white font-weight-black mb-4"</span><span class="nt">&gt;</span>Material Kit<span class="nt">&lt;/h1&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-white opacity-8 lead pe-5 me-5"</span><span class="nt">&gt;</span>The time is now for it be okay to be great. People in this world shun people for being nice. <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-white mt-4"</span><span class="nt">&gt;</span>Get Started<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn text-white shadow-none mt-4"</span><span class="nt">&gt;</span>Read more<span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+<span class="c">&lt;!-- -------- END HEADER 1 w/ text and image on right ------- --&gt;</span>
+
+  </code></pre></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="row mt-3">
+          <!-- Features -->
+<div class="col-12">
+  <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+    <div class="container border-bottom">
+      <div class="row justify-space-between py-2">
+        <div class="col-lg-3 me-auto">
+          <p class="lead text-dark pt-1 mb-0">Features</p>
+        </div>
+        <div class="col-lg-3">
+          <div class="nav-wrapper position-relative end-0">
+            <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-features-1" role="tab" aria-controls="preview" aria-selected="true">
+                <i class="fas fa-desktop text-sm me-2"></i> Preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-features-1" role="tab" aria-controls="code" aria-selected="false">
+                  <i class="fas fa-code text-sm me-2"></i> Code
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content tab-space">
+      <div class="tab-pane active" id="preview-features-1">
+        <iframe width="100%" height="600px" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+          <script src="https://kit.fontawesome.com/84e7f8bcbd.js" crossorigin="anonymous"></script>
+          <!-- Material Icons -->
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+          <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.1.0" rel="stylesheet" />
+          <!-- -------- START Features w/ icons and text on left & gradient title and text on right -------- -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 my-auto">
+      <h3 class="mt-5 mt-lg-0">Read More About Us</h3>
+      <p class="pe-5">Pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.</p>
+      <a href="javascript:;" class="text-primary icon-move-right">More about us
+        <i class="fas fa-arrow-right text-sm ms-1"></i>
+      </a>
+    </div>
+    <div class="col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0">
+      <div class="p-3 info-horizontal">
+        <div class="icon icon-shape  bg-gradient-dark shadow-dark text-center">
+          <i class="fas fa-ship opacity-10"></i>
+        </div>
+        <div class="description ps-3">
+          <p class="mb-0">It becomes harder for us to give others a hand. <br> We get our heart broken by people we love.</p>
+        </div>
+      </div>
+
+      <div class="p-3 info-horizontal">
+        <div class="icon icon-shape  bg-gradient-dark shadow-dark text-center">
+          <i class="fas fa-handshake opacity-10"></i>
+        </div>
+        <div class="description ps-3">
+          <p class="mb-0">As we live, our hearts turn colder. <br>Cause pain is what we go through as we become older.</p>
+        </div>
+      </div>
+      <div class="p-3 info-horizontal">
+        <div class="icon icon-shape  bg-gradient-dark shadow-dark text-center">
+          <i class="fas fa-hourglass opacity-10"></i>
+        </div>
+        <div class="description ps-3">
+          <p class="mb-0">When we lose family over time. <br> What else could rust the heart more over time? Blackgold.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -------- END Features w/ icons and text on left & gradient title and text on right -------- -->
+
+          '></iframe>
+      </div>
+      <div class="tab-pane" id="code-features-1">
+        <div class="position-relative p-4 pb-2">
+          <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" type="button"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+  <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="c">&lt;!-- -------- START Features w/ icons and text on left &amp; gradient title and text on right -------- --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 my-auto"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"mt-5 mt-lg-0"</span><span class="nt">&gt;</span>Read More About Us<span class="nt">&lt;/h3&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"pe-5"</span><span class="nt">&gt;</span>Pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"text-primary icon-move-right"</span><span class="nt">&gt;</span>More about us
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-arrow-right text-sm ms-1"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-3 info-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon-shape  bg-gradient-dark shadow-dark text-center"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-ship opacity-10"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description ps-3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>It becomes harder for us to give others a hand. <span class="nt">&lt;br&gt;</span> We get our heart broken by people we love.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-3 info-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon-shape  bg-gradient-dark shadow-dark text-center"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-handshake opacity-10"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description ps-3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>As we live, our hearts turn colder. <span class="nt">&lt;br&gt;</span>Cause pain is what we go through as we become older.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-3 info-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon-shape  bg-gradient-dark shadow-dark text-center"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-hourglass opacity-10"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description ps-3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>When we lose family over time. <span class="nt">&lt;br&gt;</span> What else could rust the heart more over time? Blackgold.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- -------- END Features w/ icons and text on left &amp; gradient title and text on right -------- --&gt;</span>
+
+  </code></pre></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="row text-center my-sm-5 mt-5">
+        <div class="col-lg-6 mx-auto">
+          <span class="badge bg-success mb-3">Boost creativity</span>
+          <h2 class="">With our coded pages</h2>
+          <p class="lead">The easiest way to get started is to use one of our <br /> pre-built example pages. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <a href="./pages/about-us.html">
+              <div class="card move-on-hover">
+                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/about-us.jpg" alt="aboutus">
+              </div>
+              <div class="mt-2 ms-2">
+                <h6 class="mb-0">About Us Page</h6>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 mt-md-0 mt-5">
+            <a href="./pages/contact-us.html">
+              <div class="card move-on-hover">
+                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/contact-us.jpg" alt="contacus">
+              </div>
+              <div class="mt-2 ms-2">
+                <h6 class="mb-0">Contact Us Page</h6>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 mt-md-3 mt-6">
+            <a href="./pages/sign-in.html">
+              <div class="card move-on-hover">
+                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sign-in.jpg" alt="signin">
+              </div>
+              <div class="mt-2 ms-2">
+                <h6 class="mb-0">Sign In Page</h6>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 mt-md-3 mt-6">
+            <a href="./pages/author.html">
+              <div class="card move-on-hover">
+                <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/author.jpg" alt="author">
+              </div>
+              <div class="mt-2 ms-2">
+                <h6 class="mb-0">Author Page</h6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mx-auto mt-md-0 mt-5">
+        <div class="position-sticky" style="top:100px !important">
+          <h4 class="">Presentation Pages for Company, Sign In Page, Author and Contact</h4>
+          <h6 class="text-secondary font-weight-normal">These is just a small selection of the multiple possibitilies you have. Focus on the business, not on the design.</h6>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- -------- START Content Presentation Docs ------- -->
+<div class="container mt-sm-5">
+  <div class="page-header py-6 py-md-5 my-sm-3 mb-3 border-radius-xl" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg');" loading="lazy">
+    <span class="mask bg-gradient-dark"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 ms-lg-5">
+          <h4 class="text-white">Built by developers</h4>
+          <h1 class="text-white">Complex Documentation</h1>
+          <p class="lead text-white opacity-8">From colors, cards, typography to complex elements, you will find the full documentation. Play with the utility classes and you will create unlimited combinations for our components.</p>
+          <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit" class="text-white icon-move-right">
+            Read docs
+            <i class="fas fa-arrow-right text-sm ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="info-horizontal bg-gradient-dark border-radius-xl d-block d-md-flex p-4">
+        <i class="material-symbols-rounded text-white text-3xl">flag</i>
+        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
+          <h5 class="text-white">Getting Started</h5>
+          <p class="text-white">Check the possible ways of working with our product and the necessary files for building your own project.</p>
+          <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit" class="text-white icon-move-right">
+            Let's start
+            <i class="fas fa-arrow-right text-sm ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
+      <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4 h-100">
+        <i class="material-symbols-rounded text-gradient text-primary text-3xl">precision_manufacturing</i>
+        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
+          <h5>Plugins</h5>
+          <p>Get inspiration and have an overview about the plugins that we used to create the Material Kit.</p>
+          <a href="https://www.creative-tim.com/learning-lab/bootstrap/datepicker/material-kit" class="text-primary icon-move-right">
+            Read more
+            <i class="fas fa-arrow-right text-sm ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 mt-lg-0 mt-4">
+      <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4">
+        <i class="material-symbols-rounded text-gradient text-primary text-3xl">receipt_long</i>
+        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
+          <h5>Utility Classes</h5>
+          <p>Material Kit is giving you a lot of pre-made elements. For those who want flexibility, we included many utility classes.</p>
+          <a href="https://www.creative-tim.com/learning-lab/bootstrap/utilities/material-kit" class="text-primary icon-move-right">
+            Read more
+            <i class="fas fa-arrow-right text-sm ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------- END Content Presentation Docs ------- -->
+
+
+<section class="py-7">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <h2 class="mb-0 font-weight-bolder">Trusted by over</h2>
+        <h2 class="text-gradient font-weight-bolder text-success mb-3">2,603,000+ web developers</h2>
+        <p class="lead">Many Fortune 500 companies, startups, universities and governmental institutions love Creative Tim's products. </p>
+      </div>
+    </div>
+    <div class="row mt-6">
+      <div class="col-lg-4 col-md-8">
+        <div class="card card-plain">
+          <div class="card-body">
+            <div class="author">
+              <div class="name">
+                <h6 class="mb-0 font-weight-bolder">Nick Willever</h6>
+                <div class="stats">
+                  <i class="far fa-clock"></i> 1 day ago
+                </div>
+              </div>
+            </div>
+            <p class="mt-4">"This is an excellent product, the documentation is excellent and helped me get things done more efficiently."</p>
+            <div class="rating mt-3">
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-8 ms-md-auto">
+        <div class="card bg-dark">
+          <div class="card-body">
+            <div class="author align-items-center">
+              <div class="name">
+                <h6 class="text-white mb-0 font-weight-bolder">Shailesh Kushwaha</h6>
+                <div class="stats text-white">
+                  <i class="far fa-clock"></i> 1 week ago
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-white">"I found solution to all my design needs from Creative Tim. I use them as a freelancer in my hobby projects for fun! And its really affordable, very humble guys !!!"</p>
+            <div class="rating mt-3">
+              <i class="fas fa-star text-white"></i>
+              <i class="fas fa-star text-white"></i>
+              <i class="fas fa-star text-white"></i>
+              <i class="fas fa-star text-white"></i>
+              <i class="fas fa-star text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-8">
+        <div class="card card-plain">
+          <div class="card-body">
+            <div class="author">
+              <div class="name">
+                <h6 class="mb-0 font-weight-bolder">Samuel Kamuli</h6>
+                <div class="stats">
+                  <i class="far fa-clock"></i> 3 weeks ago
+                </div>
+              </div>
+            </div>
+            <p class="mt-4">"Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend for developers who want to spend more time on the backend!."</p>
+            <div class="rating mt-3">
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <hr class="horizontal dark my-5">
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-6 ms-auto">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-apple.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-facebook.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-nasa.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-vodafone.svg" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
+        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-digitalocean.svg" alt="Logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+<style>
+
+/* Remove hover underline effect only in the footer */
+.footer .nav-item .nav-link::after {
+    content: none !important;
+}
+
+/* Footer-specific hover effect */
+.footer .nav .nav-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .nav .nav-item:hover {
+    font-weight: bold;
+    font-size: 1.2em; /* Increase text size */
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+</style>
+<footer class="footer pt-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4 ms-auto">
+        <div>
+          <a href="https://www.creative-tim.com/product/material-kit"></a>
+          <img src="./assets/img/MainLogo.png" class="mb-3" alt="main_logo" style="width: 250px;">
+          </a>
+          <h6 class="font-weight-bolder mb-4"> </h6>
+        </div>
+        <div>
+          <ul class="d-flex flex-row ms-n3 nav">
+            <a href="https://www.linkedin.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-linkedin fa-2x text-dark"></i></a>
+            <a href="https://www.facebook.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+            <a href="https://www.instagram.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-instagram fa-2x text-dark"></i></a>
+            <a href="https://www.twitter.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-x-twitter fa-2x text-dark"></i></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6 col-6 mb-4">
+        <div>
+          <h6 class="text-sm">Company</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6 col-6 mb-4">
+        <div>
+          <h6 class="text-sm">Resources</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="text-sm">Help & Support</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Google Maps Section -->
+      <div class="col-md-4 col-sm-12 mb-4">
+        <h6 class="text-sm">Find Us</h6>
+        <div class="map-container">
+          <a href="https://www.google.com/maps/place/https://maps.app.goo.gl/Ep9mMgy9ZFhKTJYw5" target="_blank">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.1187835295177!2d72.56673701100274!3d23.040281315579914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84606caee007%3A0xe77b260e66c0cc14!2sIncome%20Tax%20Circle%2C%20Shreyas%20Colony%2C%20Navrangpura%2C%20Ahmedabad%2C%20Gujarat%20380014!5e1!3m2!1sen!2sin!4v1741466513126!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              width="90%" 
+              height="100" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="text-center">
+          <p class="text-dark my-4 text-sm font-weight-normal">
+            All rights reserved. Copyright © <script>document.write(new Date().getFullYear())</script>  
+            <a href="index.html" target="_blank"> KAUSHIK S. SHETH & CO.,  
+              CHARTERED ACCOUNTANTS</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   Core JS Files   -->
+<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+
+
+
+
+<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+<script src="./assets/js/plugins/countup.min.js"></script>
+
+
+
+
+
+<script src="./assets/js/plugins/choices.min.js"></script>
+
+
+
+<script src="./assets/js/plugins/prism.min.js"></script>
+<script src="./assets/js/plugins/highlight.min.js"></script>
+
+
+
+<!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+<script src="./assets/js/plugins/rellax.min.js"></script>
+<!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+<script src="./assets/js/plugins/tilt.min.js"></script>
+<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+<script src="./assets/js/plugins/choices.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+    if (document.getElementById('state1')) {
+      const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        console.error(countUp.error);
+      }
+    }
+    if (document.getElementById('state2')) {
+      const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    if (document.getElementById('state3')) {
+      const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+      if (!countUp2.error) {
+        countUp2.start();
+      } else {
+        console.error(countUp2.error);
+      };
+    }
+  </script>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
