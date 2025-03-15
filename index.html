@@ -34,130 +34,120 @@
     <link id="pagestyle" href="./assets/css/material-kit.css?v=3.1.0" rel="stylesheet" />
     <style>
       /* Center navbar items in mobile view */
-      @media (max-width: 991px) {
-          .navbar-nav {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              width: 100%;
-          }
-          .nav-item {
-              width: 100%;
-              text-align: center;
-              position: relative;
-          }
-      }
-      
-      /* Hover underline effect for desktop */
-      @media (min-width: 992px) {
-          .nav-item .nav-link {
-              position: relative;
-              padding-bottom: 5px;
-              transition: color 0.3s ease-in-out;
-          }
-      
-          .nav-item .nav-link::after {
-              content: "";
-              position: absolute;
-              left: 50%;
-              bottom: 0;
-              width: 100%;
-              height: 2px;
-              background-color:  rgba(20, 20, 171, 0.7);
-              transform: translateX(-50%) scaleX(0);
-              transform-origin: center;
-              transition: transform 0.3s ease-in-out;
-          }
-      
-          .nav-item .nav-link:hover::after {
-              transform: translateX(-50%) scaleX(1);
-          }
-      }
-      
-      /* Smaller underline for mobile */
-      @media (max-width: 991px) {
-          .nav-item .nav-link {
-              position: relative;
-              padding-bottom: 5px;
-          }
-      
-          .nav-item .nav-link:active::after,
-          .nav-item .nav-link:focus::after {
-              content: "";
-              position: absolute;
-              left: 50%;
-              bottom: 0;
-              width: 40%;  /* Smaller underline */
-              height: 2px;
-              background-color: rgba(20, 20, 171, 0.7);
-              transform: translateX(-50%) scaleX(1);
-              transform-origin: center;
-          }
-      }
-      
-      .no-wrap {
-  display: inline-block; 
-  white-space: nowrap; /* Prevents breaking */
+     /* Responsive Navbar */
+@media (max-width: 991px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
 }
 
-@media (max-width: 768px) { /* Mobile View */
-  .no-wrap {
-    white-space: normal; /* Allows breaking in mobile view */
-  }
+/* Hover underline effect for desktop */
+@media (min-width: 992px) {
+    .nav-item .nav-link {
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease-in-out;
+    }
+    .nav-item .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(20, 20, 171, 0.7);
+        transform: translateX(-50%) scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    .nav-item .nav-link:hover::after {
+        transform: translateX(-50%) scaleX(1);
+    }
 }
 
-      /* Contact Us Button - Modern Gradient & Glow */
+/* Smaller underline for mobile */
+@media (max-width: 991px) {
+    .nav-item .nav-link {
+        position: relative;
+        padding-bottom: 5px;
+    }
+    .nav-item .nav-link:active::after,
+    .nav-item .nav-link:focus::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 40%;
+        height: 2px;
+        background-color: rgba(20, 20, 171, 0.7);
+        transform: translateX(-50%) scaleX(1);
+    }
+}
+
+/* No Wrap Utility */
+.no-wrap {
+    display: inline-block;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .no-wrap {
+        white-space: normal;
+    }
+}
+
+/* Buttons */
 .btn-contact {
-  background: linear-gradient(135deg, #ffffff, #f0f0f0);
-  ; /* Warm orange gradient */
-  color: rgb(0, 0, 0) !important;
-  border: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: black !important;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
-
 .btn-contact:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
-  filter: brightness(1.1);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.1);
 }
-
-/* Know More Button - Border Animation */
 .btn-know {
-  border: 2px solid white;
-  color: white !important;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
+    border: 2px solid white;
+    color: white !important;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
-
 .btn-know::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  top: 0;
-  left: -100%;
-  transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
 }
-
 .btn-know:hover::before {
-  left: 0;
+    left: 0;
+}
+.btn-know:hover {
+    transform: scale(1.05);
+    border-color: black;
 }
 
-.btn-know:hover {
-  transform: scale(1.05);
-  border-color: #000000; /* Subtle highlight */
-}
+/* Service Card */
 .service-card {
     background: linear-gradient(135deg, #ffffff, #f8f9fa);
-    border: none;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     padding: 30px;
     text-align: center;
-    min-height: 280px; /* Ensures equal height */
+    min-height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,177 +155,97 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-  }
-
-  .service-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.05));
-    z-index: 0;
-  }
-
-  .service-card:hover {
+}
+.service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
-  }
-
-  /* Icon Styling */
-  .service-icon {
+}
+.service-icon {
     font-size: 40px;
     color: #007bff;
     transition: color 0.3s ease-in-out;
-    z-index: 1;
-  }
-
-  .service-card:hover .service-icon {
-    color: #ffffff;
-  }
-
-  /* Text Styling */
-  .service-card h5 {
+}
+.service-card:hover .service-icon {
+    color: white;
+}
+.service-card h5 {
     font-size: 20px;
     font-weight: 700;
     margin-top: 15px;
-    z-index: 1;
-  }
-
-  .service-card p {
+}
+.service-card p {
     font-size: 14px;
     margin-top: 10px;
     color: #666;
-    z-index: 1;
-  }
-
-  .service-card:hover p {
+}
+.service-card:hover p {
     color: white;
-  }
-
-  /* Responsive Layout */
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
     .service-card {
-      min-height: 260px;
+        min-height: 260px;
     }
-  }
-        /* Colors */
-  .text-orange { color: orange !important; }
-  .text-green { color: green !important; }
-  .text-black { color: black !important; }
+}
 
-  /* Hover Effect */
-  .custom-hover {
+/* General Styling */
+.text-orange { color: orange !important; }
+.text-green { color: green !important; }
+.text-black { color: black !important; }
+.custom-hover {
     transition: all 0.3s ease-in-out;
-  }
-
-  .custom-hover:hover {
+}
+.custom-hover:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .col-sm-10 {
-      width: 100%;
-    }
-  }
-  .text-gradient {
-    background: linear-gradient(45deg, #28a745, #17a2b8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Hover Effect */
-  .info i {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .info:hover i {
-    transform: scale(1.2);
-  }
-
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .col-md-6 {
-      text-align: center;
-    }
-  }
-    .content-box {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-  }
-  @media (max-width: 768px) {
-  .footer .col-md-3 {
-    text-align: center; /* Center align content */
-  }
-
-  .footer .col-md-3 img {
-    width: 200px; /* Adjust logo size */
-  }
-
-  .footer .nav {
-    flex-direction: column; /* Stack nav links vertically */
-    align-items: center;
-  }
-
-  .footer .nav-item {
-    text-align: center;
-    width: 100%;
-  }
-
-  /* Center Social Icons */
-  .footer .d-flex {
-    justify-content: center !important;
-    align-items: center !important; 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .footer .social-icon {
-    font-size: 0.7rem; /* Make icons bigger */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px; /* Set fixed width for uniform spacing */
-    height: 50px; /* Set fixed height */
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.05); /* Light background */
-  }
-
-  /* Ensure Google Map is responsive */
-  .map-container iframe {
-    width: 100% !important; 
-    height: 200px; 
-  }
-
-  /* Full-width and centered columns */
-  .footer .col-md-4, 
-  .footer .col-md-2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-}.why-item {
-    display: flex;
-    align-items: center;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
 }
 
-.why-item:hover {
-    background: #f8f9fa; /* Light hover effect */
-    transform: translateY(-3px); /* Slight lift */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Footer */
+@media (max-width: 768px) {
+    .footer .col-md-3 {
+        text-align: center;
+    }
+    .footer .col-md-3 img {
+        width: 200px;
+    }
+    .footer .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+    .footer .d-flex {
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footer .social-icon {
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    .map-container iframe {
+        width: 100% !important;
+        height: 200px;
+    }
+    .footer .col-md-4, .footer .col-md-2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 
+/* Icon Background */
 .icon-bg {
     min-width: 60px;
     height: 60px;
@@ -346,25 +256,128 @@
     border-radius: 50%;
     margin-right: 15px;
 }
-
-.why-item i {
-    font-size: 1.8rem;
+/* Custom dropdown styling */
+/* General Dropdown Styling */
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 180px;
 }
 
+/* Show dropdown on hover in Desktop */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Keep Dropdown Open When Moving Between Items */
+.navbar-nav .dropdown-menu:hover {
+  display: block;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  padding: 10px 20px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth Hover Effect */
+.social-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease-in-out;
+              }
+
+              /* Hover Effect - Slight Scale & Color Change */
+              .social-icon:hover {
+                transform: scale(1.1);
+                background: rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+              }
+
+              /* Icons */
+              .social-icon i {
+                font-size: 1.2rem;  /* Adjust icon size */
+                color: #333;
+                transition: color 0.3s ease-in-out;
+              }
+
+              .social-icon:hover i {
+                color: #000000; /* Change color on hover */
+              }
+
+              /* Mobile View */
+              .social-icons-mobile {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+              }
+
+              /* Desktop View */
+              .social-icons-desktop {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+              }
+
+              @media (min-width: 992px) {  /* Applies only for desktop screens */
+  .navbar-brand img {
+    max-width: 280px !important;  /* Increase the size */
+    height: auto !important;  /* Maintain aspect ratio */
+  }
+}
+@media (min-width: 992px) {
+  .logo {
+    max-width: 280px !important;  /* Increase desktop logo size */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand img {
+    width: 280px !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-brand img {
+    width: 215px !important;
+    height: auto !important;
+  }
+}
 </style>
       
 </head>
 
 <body class="index-page bg-gray-200">
-<!-- Navbar -->
- <div class="container position-sticky z-index-sticky top-0">
+  <!-- Navbar -->
+  <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
         <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 p-2 start-0 end-0 mx-4">
           <div class="container-fluid px-0">
             <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.html">
-              <img src="./assets/img/MainLogo.png" class="img-fluid" alt="Responsive Logo" style="max-width: 215px; height: auto;">
+              <img src="./assets/img/MainLogo.png" class="img-fluid logo" alt="Responsive Logo">
             </a>
+            
+            
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon mt-2">
                 <span class="navbar-toggler-bar bar1"></span>
@@ -374,41 +387,94 @@
             </button>
             <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
               <ul class="navbar-nav ms-auto d-flex justify-content-center w-100">
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#"><b>Home</b></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"><b>Home</b></a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#"><b>About Us</b></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/about-us.html"><b>About Us</b></a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#"><b>Services</b></a>
+
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown dropdown-hover mx-2 align-items-center">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center justify-content-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                  <b>Services</b>
+                  <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-md-2">
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
+                  <div class="d-none d-lg-block">
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service A</span>
+                    </a>
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service B</span>
+                    </a>
+                    <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                    <span>Service C</span>
+                    </a>
+                    <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                    <span>Service D</span>
+                    </a>
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service E</span>
+                    </a>
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service F</span>
+                    </a>
+                    <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                    <span>Service G</span>
+                    </a>
+                    <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                    <span>Service H</span>
+                    </a>
+                  </div>
+                  <div class="d-lg-none">
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service A</span>
+                    </a>
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service B</span>
+                    </a>
+                    <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                    <span>Service C</span>
+                    </a>
+                    <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                    <span>Service D</span>
+                    </a>
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service E</span>
+                    </a>
+                    <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                    <span>Service F</span>
+                    </a>
+                    <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                    <span>Service G</span>
+                    </a>
+                    <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                    <span>Service H</span>
+                    </a>
+                  </div>
+                  </div>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#"><b>Blogs</b></a>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/blogs.html"><b>Blogs</b></a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#"><b>Contact Us</b></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/contact-us.html"><b>Contact Us</b></a>
                 </li>
               </ul>
-                <!-- Social Media Icons (Mobile) -->
-                <style>
-                .social-icon:hover {
-                  transform: scale(1.2);
-                  transition: transform 0.3s ease-in-out;
-                }
-                </style>
-                <div class="d-lg-none text-center mt-3">
-                  <a href="https://www.linkedin.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-linkedin fa-2x text-dark"></i></a>
-                  <a href="https://www.facebook.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-facebook fa-2x text-dark"></i></a>
-                  <a href="https://www.instagram.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-instagram fa-2x text-dark"></i></a>
-                  <a href="https://www.twitter.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-x-twitter fa-2x text-dark"></i></a>
-                </div>
-              <!-- Social Media Icons -->
-              <div class="d-none d-lg-flex ms-auto">
-                <a href="https://www.linkedin.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-linkedin fa-2x text-dark"></i></a>
-                <a href="https://www.facebook.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-facebook fa-2x text-dark"></i></a>
-                <a href="https://www.instagram.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-instagram fa-2x text-dark"></i></a>
-                <a href="https://www.twitter.com" class="btn btn-lg mb-0 p-1 social-icon"><i class="fab fa-x-twitter fa-2x text-dark"></i></a>
+
+              <!-- Social Media Icons (Mobile) -->
+              <div class="d-lg-none text-center social-icons-mobile">
+                <a href="tel:+919825328523" class="btn social-icon"><i class="fas fa-phone"></i></a>
+                <a href="mailto:kssheth@yahoo.com" class="btn social-icon"><i class="fas fa-envelope"></i></a>
+              </div>
+              
+              <!-- Social Media Icons (Desktop) -->
+              <div class="d-none d-lg-flex ms-auto social-icons-desktop">
+                <a href="tel:+919825328523" class="btn mb-0 p-1 social-icon"><i class="fas fa-phone"></i></a>
+                <a href="mailto:kssheth@yahoo.com" class="btn mb-0 p-1 social-icon"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -416,9 +482,7 @@
       </div>
     </div>
   </div>
-    <!-- End Navbar -->
-
-
+  <!-- End Navbar -->
   
 
     
@@ -434,7 +498,7 @@
 
 <!--HEADER START-->
     <header class="header-2">
-      <div class="page-header min-vh-100 position-relative" style="background: url('./assets/img/bridge.jpg') center/cover no-repeat;" loading="lazy">
+      <div class="page-header min-vh-100 position-relative" style="background: url('./assets/img/option_a.png') center/cover no-repeat;" loading="lazy">
         
         <span class="mask bg-gradient-dark opacity-25 position-absolute w-100 h-100"></span>
     
@@ -446,17 +510,17 @@
               <div class="blur-box p-4">
                 <h1 class="text-white font-weight-black mb-4">
                   <span class="no-wrap">
-                    Accounting with Integrity<span style="color: orange;">.</span><span style="color: white;">.</span><span style="color: green;">.</span> 
-                    <br><span style="font-size: 0.8em;">Growth with Confidence<span style="color: orange;">.</span><span style="color: white;">.</span><span style="color: green;">.</span></span>
+                    Transparent Advice<span style="color: orange;">.</span><span style="color: white;">.</span><span style="color: green;">.</span> 
+                    <br><span style="font-size: 0.95em;">Trusted Expertise<span style="color: orange;">.</span><span style="color: white;">.</span><span style="color: green;">.</span></span>
                   </span>
                 </h1>
                 <p class="text-white opacity-8 lead pe-5 me-5">
-                  Expert accounting solutions tailored to your business success.
+                  Ensuring integrity in every financial decision.
                 </p>
                 
                 <div class="d-flex flex-wrap gap-3 mt-4">
-                  <a href="#" class="btn btn-lg btn-contact fw-bold px-4 py-2">Contact Us</a>
-                  <a href="#" class="btn btn-lg btn-know fw-bold px-4 py-2">Know More</a>
+                  <a href="./pages/contact-us.html" class="btn btn-lg btn-contact fw-bold px-4 py-2">Contact Us</a>
+                  <a href="pages/about-us.html" class="btn btn-lg btn-know fw-bold px-4 py-2">Know More</a>
                 </div>
               </div>
     
@@ -467,160 +531,57 @@
     </header>
     <!--HEADER END-->
 
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n4">
+  <section class="py-0" id="count-stats">
+    <div class="bg-gradient-dark position-relative m-3 border-radius-xl overflow-hidden" style="height: 340px;">
+      <img src="./assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-2">
+      <div class="container py-4 position-relative z-index-2">
+          <div class="row justify-content-center">
+              <div class="col-lg-12">
+                  <!-- Wide Rectangle with Content -->
+                  <div class="bg-white p-4 shadow-lg text-center" 
+                       style="border-radius: 16px;"> <!-- Added inline border-radius -->
+                      <h2 class="text-dark fw-bold mb-3">Expert Accounting & Audit Services in India</h2>
+                      
+                      <!-- Minimal Decorative Dots -->
+                      <div class="d-flex justify-content-center gap-2 my-2">
+                          <span class="rounded-circle bg-warning d-inline-block" style="width: 8px; height: 8px;"></span>
+                          <span class="rounded-circle bg-secondary d-inline-block" style="width: 8px; height: 8px;"></span>
+                          <span class="rounded-circle bg-success d-inline-block" style="width: 8px; height: 8px;"></span>
+                      </div>
   
-<!--Boasting Start-->
-<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-
-<section class="pt-3 pb-4" id="count-stats">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9 mx-auto py-3">
-        <div class="row">
-          <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-              <h1 class="text-gradient text-dark"><span id="state1" countTo="50000">0</span>+</h1>
-              <h5 class="mt-3 text-success">Tax Fillings</h5>
-              <p class="text-sm font-weight-normal">Ensuring accuracy and compliance with expert tax preparation services.</p>
-            </div>
-            <hr class="vertical dark">
+                      <p class="fs-6 text-muted">
+                          Established in <strong>1994</strong> in <strong>Ahmedabad, Gujarat</strong>,  
+                          <strong>Kaushik S. Sheth & Co.</strong>, Chartered Accountants, has been providing 
+                          professional financial and advisory services for nearly <strong>30 years</strong>.
+                      </p>
+  
+                      <p class="text-muted">
+                          We are committed to <strong>integrity, transparency, and excellence</strong>,  
+                          serving clients across Ahmedabad, Gandhinagar, Kalol, Mehsana, Anand, and Nadiad.
+                      </p>
+  
+                      <p class="text-muted mb-0">
+                          Our firm is backed by a <strong>dedicated team of professionals</strong> with extensive expertise in
+                          taxation, audits, compliance, and consultancy services. Led by <strong>CA Kaushik Sheth</strong>,  
+                          we prioritize delivering <strong>efficient</strong>, <strong>reliable</strong>, and <strong>client-focused</strong> solutions.
+                      </p>
+                  </div>
+              </div>
           </div>
-          <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-              <h1 class="text-gradient text-dark"> <span id="state2" countTo="30">0</span>+</h1>
-              <h5 class="mt-3 text-success">Years of Excellence</h5>
-              <p class="text-sm font-weight-normal">Delivering trusted financial and accounting solutions since 1994.</p>
-            </div>
-            <hr class="vertical dark">
-          </div>
-          <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-              <h1 class="text-gradient text-dark"> <span id="state3" countTo="1000">0</span>+</h1>
-              <h5 class="mt-3 text-success">Clients Served</h5>
-              <p class="text-sm font-weight-normal">Building lasting relationships with businesses across India and beyond.</p>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
   </div>
-</section>
+  
+  
+  
+  
+  </section>
+  
+  
+  
 
-<!--Boasting End--><section class="pt-5 pb-5 text-white position-relative" id="count-stats">
-  <!-- Background Image -->
-  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50" 
-  style="background: url('./assets/img/shapes/waves-white.svg') no-repeat center center/cover;">
-</div>
+<!--Boasting End-->
 
-<div class="container position-relative">
-<div class="row justify-content-center">
- <div class="col-lg-10">
-   
-   <!-- Expandable Content Box -->
-   <div class="p-4 shadow-lg bg-light bg-opacity-75 rounded">
-     <h2 class="text-dark text-center">Expert Accounting & Audit Services in India</h2>
-     <h2 class="text-center">
-       <span class="text-warning">.</span>
-       <span class="text-white">.</span>
-       <span class="text-success">.</span>
-     </h2>
-     <p class="text-muted text-center">
-       At <strong>Kaushik S. Sheth & Co., Chartered Accountants</strong>, we don’t just offer financial services—we become an integral part of your business’s success. 
-       With a steadfast commitment to accuracy, compliance, and strategic financial management, we provide comprehensive solutions in accounting, auditing, 
-       taxation, GST, payroll, and financial advisory.
-     </p>
-     
-     <!-- Extra Content (Initially Hidden) -->
-     <div id="extraContent" style="display: none;">
-      <br>
-       <h3 class="text-dark mt-3 text-center">A Premier CA Firm in Ahmedabad</h3>
-       <h2 class="text-center">
-        <span class="text-warning">.</span>
-        <span class="text-white">.</span>
-        <span class="text-success">.</span>
-      </h2>
-       <p class="text-muted">
-         Founded with a vision to redefine excellence in financial consultancy, Kaushik S. Sheth & Co. has grown into a trusted name in the industry. 
-         Our team of dedicated Chartered Accountants in Ahmedabad takes a problem-solving approach, ensuring that businesses receive personalized, 
-         practical, and effective financial solutions.
-       </p>
-       <ul class="text-muted">
-         <li> We prioritize client success through tailored strategies.</li>
-         <li> Our solutions are designed for simplicity, accuracy, and compliance.</li>
-         <li> Long-term partnerships and trust drive our firm’s values.</li>
-       </ul>
-       <p class="text-muted">
-         Since our establishment, we have built a reputation for being the financial backbone of businesses across various industries. Our expertise extends 
-         to specialized areas such as GST compliance, transfer pricing, RBI/FEMA regulations, forensic auditing, and outsourced accounting solutions.
-       </p>
-     </div>
-
-     <!-- "Know More" Button -->
-     <div class="text-center mt-3">
-       <button class="btn btn-dark" id="toggleMore">Know More</button>
-     </div>
-
-   </div>
-
- </div>
-</div>
-</div>
-</section>
-
-
-
-
-<!-- START About Us Section -->
-<div class="container py-5">
-  <div class="d-flex justify-content-center">
-    <span class="badge bg-gradient-dark mb-3">Guiding Principles</span>
-  </div>
-  <h2 class="text-center fw-bold text-dark mb-4">Our Trusted Framework </h2>
-  <h5 class="lead text-success" style="text-align: center;"><b>We are committed to excellence, delivering world-class services with integrity and transparency<span style="color: orange;">.</span><span style="color: white; text-shadow: 0 0 2px black;">.</span><span style="color: green;">.</span></b></h5>
-
-  <div class="row justify-content-center">
-    
-    <!-- Mission Card -->
-    <div class="col-md-4 col-sm-10 mb-4">
-      <div class="card text-center shadow-lg rounded-3 custom-hover">
-        <div class="card-body">
-          <i class="fas fa-bullseye fa-2x text-orange mb-3"></i>
-          <h5 class="fw-bold text-orange">Our Mission</h5>
-          <p class="text-muted">
-            We build a high-quality organization that delivers best-in-class services, ensuring value, compliance, and financial growth.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Vision Card -->
-    <div class="col-md-4 col-sm-10 mb-4">
-      <div class="card text-center shadow-lg rounded-3 custom-hover">
-        <div class="card-body">
-          <i class="fas fa-eye fa-2x text-black mb-3"></i>
-          <h5 class="fw-bold text-black">Our Vision</h5>
-          <p class="text-muted">
-            We aim to be a trusted partner in financial and management solutions, setting new industry benchmarks.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Values Card -->
-    <div class="col-md-4 col-sm-10 mb-4">
-      <div class="card text-center shadow-lg rounded-3 custom-hover">
-        <div class="card-body">
-          <i class="fas fa-handshake fa-2x text-green mb-3"></i>
-          <h5 class="fw-bold text-green">Our Values</h5>
-          <p class="text-muted">
-            Rooted in trust, ethics, and long-term partnerships, we ensure sustainable growth through proactive solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-<!-- END About Us Section -->
 
 
 
@@ -628,7 +589,8 @@
   <div class="container">
     <div class="row text-center my-sm-5 mt-5">
       <div class="col-lg-8 mx-auto">
-        <span class="badge bg-gradient-dark mb-3">Our Services</span>
+        <a href="./pages/services.html">
+        <span class="badge bg-gradient-dark mb-3 custom-hover">Our Services</span></a>
         <h2 class="mb-4 fw-bold">Services We Provide</h2>
         <h5 class="lead text-success"><b>We offer tailored financial, taxation, and business advisory services to help you grow efficiently<span style="color: orange;">.</span><span style="color: white; text-shadow: 0 0 2px black;">.</span><span style="color: green;">.</span></b></h5>
       </div>
@@ -701,78 +663,22 @@
       </div>
     </div>
   </div>
-  <div class="d-flex justify-content-center">
+  <!-- <div class="d-flex justify-content-center">
     <a href="#" class="btn btn-lg btn-contact fw-bold px-4 py-2">Explore our Services</a>
-  </div>
+  </div> -->
 </section>
 
-<section class="container my-5">
-  <div class="d-flex justify-content-center">
-    <span class="badge bg-gradient-dark mb-3">The Outsourcing Advantage</span>
-  </div>
-  <h2 class="text-center mb-4 fw-bold text-dark">Why Outsourcing And Why Us?</h2>
-  <h5 class="lead text-success" style="text-align: center;">
-   <b>Empower Your Firm <span style="color: orange;">.</span><span style="color: white; text-shadow: 0 0 2px black;">.</span><span style="color: green;">.</span> Elevate Your Growth<span style="color: orange;">.</span><span style="color: white; text-shadow: 0 0 2px black;">.</span><span style="color: green;">.</span></b>
-  </h5>
-  <div class="list-group">
-      <!-- Item 1 -->
-      <div class="list-group-item py-4 px-3 border-0 position-relative why-item">
-          <div class="icon-bg"><i class="fa-solid fa-chart-line fa-2x text-primary"></i></div>
-          <div>
-              <h5 class="fw-bold mb-2 text-dark">Improved Productivity & Profits</h5>
-              <p class="mb-0 text-secondary">Eliminate bottlenecks and offload routine tasks like bookkeeping, payroll, and tax preparation, allowing CPA firms to focus on client relationships and business growth.</p>
-          </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="list-group-item py-4 px-3 border-0 position-relative why-item">
-          <div class="icon-bg"><i class="fa-solid fa-piggy-bank fa-2x text-success"></i></div>
-          <div>
-              <h5 class="fw-bold mb-2 text-dark">Cost Saving</h5>
-              <p class="mb-0 text-secondary">Scale up or down as needed instead of bearing fixed employee costs. Convert fixed costs into variable expenses, optimizing resource utilization.</p>
-          </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="list-group-item py-4 px-3 border-0 position-relative why-item">
-          <div class="icon-bg"><i class="fa-solid fa-clock fa-2x text-warning"></i></div>
-          <div>
-              <h5 class="fw-bold mb-2 text-dark">Round-the-Clock Operations</h5>
-              <p class="mb-0 text-secondary">Leverage time zone differences and flexible work hours to ensure 24/7 operations, improving service turnaround time for clients.</p>
-          </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="list-group-item py-4 px-3 border-0 position-relative why-item">
-          <div class="icon-bg"><i class="fa-solid fa-laptop fa-2x text-info"></i></div>
-          <div>
-              <h5 class="fw-bold mb-2 text-dark">Lower IT Infrastructure Costs</h5>
-              <p class="mb-0 text-secondary">Reduce capital expenditure on IT infrastructure as execution tasks are handled by us, enabling CPA firms to focus on high-value strategic activities.</p>
-          </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="list-group-item py-4 px-3 border-0 position-relative why-item">
-          <div class="icon-bg"><i class="fa-solid fa-lightbulb fa-2x text-danger"></i></div>
-          <div>
-              <h5 class="fw-bold mb-2 text-dark">Focus on Core Competency</h5>
-              <p class="mb-0 text-secondary">Delegating routine tasks to specialized professionals allows CPA firms to focus on their expertise, ensuring business growth and better client service.</p>
-          </div>
-      </div>
-  </div>
-</section>
 
 <!-- -------- START Content Presentation Docs ------- -->
 <div class="container mt-sm-5">
-  <div class="page-header py-6 py-md-5 my-sm-3 mb-3 border-radius-xl" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg');" loading="lazy">
+  <div class="page-header py-6 py-md-5 my-sm-3 mb-3 border-radius-xl" style="background-image: url('./assets/img/option_g.png');" loading="lazy">
     <span class="mask bg-gradient-dark"></span>
     <div class="container">
       <div class="row">
         <div class="col-lg-6 ms-lg-5">
           <!-- <h4 class="text-white">Built by developers</h4> -->
           <h1 class="text-white">Trusted Chartered Accountants in Ahmedabad <span style="color: orange;">.</span><span style="color: white; text-shadow: 0 0 2px black;">.</span><span style="color: green;">.</span></h1>
-          <p class="lead text-white opacity-8">With deep financial knowledge, extensive industry experience, and a strong team of professionals, we ensure high standards of accuracy and efficiency 
-            in all our services. Our dedication to quality, integrity, and continuous improvement has positioned us among the most sought-after accounting firms in India.</p>
+          <p class="lead text-white opacity-8">With extensive financial knowledge and a dedicated team of professionals, we uphold the highest standards of accuracy and efficiency. Our commitment to integrity, professionalism, and continuous improvement ensures reliable and transparent financial solutions for our clients.</p>
           <!-- <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit" class="text-white icon-move-right">
             Read docs
             <i class="fas fa-arrow-right text-sm ms-1"></i>
@@ -782,155 +688,6 @@
     </div>
   </div>
 </div>
-<!-- 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="info-horizontal bg-gradient-dark border-radius-xl d-block d-md-flex p-4">
-        <i class="material-symbols-rounded text-white text-3xl">flag</i>
-        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-          <h5 class="text-white">Getting Started</h5>
-          <p class="text-white">Check the possible ways of working with our product and the necessary files for building your own project.</p>
-          <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit" class="text-white icon-move-right">
-            Let's start
-            <i class="fas fa-arrow-right text-sm ms-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
-      <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4 h-100">
-        <i class="material-symbols-rounded text-gradient text-primary text-3xl">precision_manufacturing</i>
-        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-          <h5>Plugins</h5>
-          <p>Get inspiration and have an overview about the plugins that we used to create the Material Kit.</p>
-          <a href="https://www.creative-tim.com/learning-lab/bootstrap/datepicker/material-kit" class="text-primary icon-move-right">
-            Read more
-            <i class="fas fa-arrow-right text-sm ms-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 mt-lg-0 mt-4">
-      <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4">
-        <i class="material-symbols-rounded text-gradient text-primary text-3xl">receipt_long</i>
-        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-          <h5>Utility Classes</h5>
-          <p>Material Kit is giving you a lot of pre-made elements. For those who want flexibility, we included many utility classes.</p>
-          <a href="https://www.creative-tim.com/learning-lab/bootstrap/utilities/material-kit" class="text-primary icon-move-right">
-            Read more
-            <i class="fas fa-arrow-right text-sm ms-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- -------- END Content Presentation Docs ------- -->
-
-
-<section class="py-7">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 mx-auto text-center">
-        <h2 class="mb-0 font-weight-bolder">Excellence<span style="color: orange; ">.</span> Trust<span style="color: white; text-shadow: 0 0 2px black;">.</span> Success<span style="color: green;">.</span></h2>
-        <h2 class="text-gradient font-weight-bolder text-success mb-3">Your growth, our commitment.</h2>
-        <p class="lead"><i>"Accounting isn’t just about compliance; it’s about clarity, confidence, and growth. With our expertise, you gain a partner who understands your business as deeply as you do."</i> </p>
-      </div>
-    </div>
-    <div class="row mt-6">
-      <div class="col-lg-4 col-md-8">
-        <div class="card card-plain">
-          <div class="card-body">
-            <div class="author">
-              <div class="name">
-                <h6 class="mb-0 font-weight-bolder">Amit Sharma</h6>
-                <div class="stats">
-                  <i class="far fa-clock"></i> 1 year ago
-                </div>
-              </div>
-            </div>
-            <p class="mt-4">"Exceptional service! The team at Kaushik S. Sheth & Co. made our accounting and tax processes seamless. Their expertise and professionalism are truly commendable!"</p>
-            <div class="rating mt-3">
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-8 ms-md-auto">
-        <div class="card bg-dark">
-          <div class="card-body">
-            <div class="author align-items-center">
-              <div class="name">
-                <h6 class="text-white mb-0 font-weight-bolder">Vikram Malhotra</h6>
-                <div class="stats text-white">
-                  <i class="far fa-clock"></i> 7 months ago
-                </div>
-              </div>
-            </div>
-            <p class="mt-4 text-white">"Professional, knowledgeable, and highly efficient. Their team provided us with tailored financial solutions, ensuring compliance and optimizing our tax strategy."</p>
-            <div class="rating mt-3">
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-8">
-        <div class="card card-plain">
-          <div class="card-body">
-            <div class="author">
-              <div class="name">
-                <h6 class="mb-0 font-weight-bolder">Rajesh Iyer</h6>
-                <div class="stats">
-                  <i class="far fa-clock"></i> 3 weeks ago
-                </div>
-              </div>
-            </div>
-            <p class="mt-4">"Working with Kaushik S. Sheth & Co. has been a seamless experience. Their proactive approach and deep industry knowledge make them a trusted partner for any business."</p>
-            <div class="rating mt-3">
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-              <i class="fas fa-star text-success"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <hr class="horizontal dark my-5">
-    <div class="row">
-      <div class="col-lg-2 col-md-4 col-6 ms-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-apple.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-facebook.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-nasa.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-vodafone.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-digitalocean.svg" alt="Logo">
-      </div>
-    </div>
-  </div>
-</section>
-
 
 </div>
 <style>
@@ -964,7 +721,7 @@
         </div>
         <div>
           <p class="text-sm text-dark"><strong>ADDRESS:</strong><br>
-            <i class="fas fa-map-marker-alt"></i> 204, Maurya Complex, Near C U Shah College,
+            <i class="fas fa-map-marker-alt"></i> 204-208, Maurya Complex, Near C U Shah College,
             Off. Ashram Road, Incometax,
             Ahmedabad-380014
           </p>
@@ -989,24 +746,19 @@
           <h6 class="text-sm">Company</h6>
           <ul class="flex-column ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="./pages/about-us.html">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
+            
           </ul>
         </div>
-      </div>
-
-      <div class="col-md-2 col-sm-6 col-6 mb-4">
         <div>
           <h6 class="text-sm">Resources</h6>
           <ul class="flex-column ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
+              <a class="nav-link" href="./pages/blogs.html">Blogs</a>
             </li>
           </ul>
         </div>
@@ -1014,7 +766,39 @@
           <h6 class="text-sm">Help & Support</h6>
           <ul class="flex-column ms-n3 nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="./pages/contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6 col-6 mb-4">
+        <div>
+          <h6 class="text-sm">Services</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service A</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service B</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service C</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service D</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service E</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service F</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service G</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/services.html">Service H</a>
             </li>
           </ul>
         </div>
@@ -1025,7 +809,7 @@
         <h6 class="text-sm">Find Us</h6>
         <div class="map-container">
           <a href="https://www.google.com/maps/place/https://maps.app.goo.gl/Ep9mMgy9ZFhKTJYw5" target="_blank">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.1187835295177!2d72.56673701100274!3d23.040281315579914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84606caee007%3A0xe77b260e66c0cc14!2sIncome%20Tax%20Circle%2C%20Shreyas%20Colony%2C%20Navrangpura%2C%20Ahmedabad%2C%20Gujarat%20380014!5e1!3m2!1sen!2sin!4v1741466513126!5m2!1sen!2sin" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.193964292743!2d72.56709639581143!3d23.04291302398465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85006fa5affb%3A0xbc43d4f068d46568!2sKAUSHIK%20S.%20SHETH%20%26%20CO.%20CHARTERED%20ACCOUNTANTS!5e1!3m2!1sen!2sin!4v1742063361332!5m2!1sen!2sin" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </iframe>
           </a>
         </div>
@@ -1143,7 +927,28 @@
 
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const servicesDropdown = document.getElementById("servicesDropdown");
+  const servicesMenu = document.getElementById("servicesMenu");
 
+  servicesDropdown.addEventListener("click", function (e) {
+    e.preventDefault();
+    const isExpanded = this.getAttribute("aria-expanded") === "true";
+    this.setAttribute("aria-expanded", !isExpanded);
+    servicesMenu.classList.toggle("show");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!servicesDropdown.contains(e.target) && !servicesMenu.contains(e.target)) {
+      servicesMenu.classList.remove("show");
+      servicesDropdown.setAttribute("aria-expanded", "false");
+    }
+  });
+});
+
+</script>
 
 
 

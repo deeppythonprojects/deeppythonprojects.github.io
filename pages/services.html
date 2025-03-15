@@ -1,0 +1,887 @@
+<!--
+=========================================================
+* Material Kit 3 - v3.1.0
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Copyright 2024 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/logo_1.jpg">
+
+    <title>
+        KAUSHIK S. SHETH & CO. CHARTERED ACCOUNTANTS
+    </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/84e7f8bcbd.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/material-kit.css?v=3.1.0" rel="stylesheet" />
+  <style>
+    /* Center navbar items in mobile view */
+   /* Responsive Navbar */
+@media (max-width: 991px) {
+  .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+  .nav-item {
+      width: 100%;
+      text-align: center;
+      position: relative;
+  }
+}
+
+/* Hover underline effect for desktop */
+@media (min-width: 992px) {
+  .nav-item .nav-link {
+      position: relative;
+      padding-bottom: 5px;
+      transition: color 0.3s ease-in-out;
+  }
+  .nav-item .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(20, 20, 171, 0.7);
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.3s ease-in-out;
+  }
+  .nav-item .nav-link:hover::after {
+      transform: translateX(-50%) scaleX(1);
+  }
+}
+
+/* Smaller underline for mobile */
+@media (max-width: 991px) {
+  .nav-item .nav-link {
+      position: relative;
+      padding-bottom: 5px;
+  }
+  .nav-item .nav-link:active::after,
+  .nav-item .nav-link:focus::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 40%;
+      height: 2px;
+      background-color: rgba(20, 20, 171, 0.7);
+      transform: translateX(-50%) scaleX(1);
+  }
+}
+
+/* No Wrap Utility */
+.no-wrap {
+  display: inline-block;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .no-wrap {
+      white-space: normal;
+  }
+}
+
+/* Buttons */
+.btn-contact {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: black !important;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+.btn-contact:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+  filter: brightness(1.1);
+}
+.btn-know {
+  border: 2px solid white;
+  color: white !important;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.btn-know::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+}
+.btn-know:hover::before {
+  left: 0;
+}
+.btn-know:hover {
+  transform: scale(1.05);
+  border-color: black;
+}
+
+/* Service Card */
+.service-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 30px;
+  text-align: center;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+.service-icon {
+  font-size: 40px;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+.service-card:hover .service-icon {
+  color: white;
+}
+.service-card h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.service-card p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #666;
+}
+.service-card:hover p {
+  color: white;
+}
+@media (max-width: 768px) {
+  .service-card {
+      min-height: 260px;
+  }
+}
+
+/* General Styling */
+.text-orange { color: orange !important; }
+.text-green { color: green !important; }
+.text-black { color: black !important; }
+.custom-hover {
+  transition: all 0.3s ease-in-out;
+}
+.custom-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  .footer .col-md-3 {
+      text-align: center;
+  }
+  .footer .col-md-3 img {
+      width: 200px;
+  }
+  .footer .nav {
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer .nav-item {
+      text-align: center;
+      width: 100%;
+  }
+  .footer .d-flex {
+      justify-content: center !important;
+      align-items: center !important;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+  .footer .social-icon {
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.05);
+  }
+  .map-container iframe {
+      width: 100% !important;
+      height: 200px;
+  }
+  .footer .col-md-4, .footer .col-md-2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+}
+
+/* Icon Background */
+.icon-bg {
+  min-width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+/* Custom dropdown styling */
+/* General Dropdown Styling */
+.navbar-nav .dropdown-menu {
+display: none;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+background-color: white;
+border-radius: 8px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+padding: 8px 0;
+min-width: 180px;
+}
+
+/* Show dropdown on hover in Desktop */
+@media (min-width: 992px) {
+.navbar-nav .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+}
+
+/* Keep Dropdown Open When Moving Between Items */
+.navbar-nav .dropdown-menu:hover {
+display: block;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+padding: 10px 20px;
+text-align: center;
+transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth Hover Effect */
+.social-icon {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background: rgba(0, 0, 0, 0.05);
+              transition: all 0.3s ease-in-out;
+            }
+
+            /* Hover Effect - Slight Scale & Color Change */
+            .social-icon:hover {
+              transform: scale(1.1);
+              background: rgba(0, 0, 0, 0.1);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Icons */
+            .social-icon i {
+              font-size: 1.2rem;  /* Adjust icon size */
+              color: #333;
+              transition: color 0.3s ease-in-out;
+            }
+
+            .social-icon:hover i {
+              color: #000000; /* Change color on hover */
+            }
+
+            /* Mobile View */
+            .social-icons-mobile {
+              margin-top: 1rem;
+              display: flex;
+              justify-content: center;
+              gap: 12px;
+            }
+
+            /* Desktop View */
+            .social-icons-desktop {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+            }
+
+            @media (min-width: 992px) {  /* Applies only for desktop screens */
+.navbar-brand img {
+  max-width: 280px !important;  /* Increase the size */
+  height: auto !important;  /* Maintain aspect ratio */
+}
+}
+@media (min-width: 992px) {
+.logo {
+  max-width: 280px !important;  /* Increase desktop logo size */
+}
+}
+
+@media (min-width: 992px) {
+.navbar-brand img {
+  width: 280px !important;
+  height: auto !important;
+}
+}
+@media (max-width: 992px) {
+.navbar-brand img {
+  width: 215px !important;
+  height: auto !important;
+}
+}
+</style>
+    
+</head>
+
+<body class="index-page bg-gray-200">
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 p-2 start-0 end-0 mx-4">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand font-weight-bolder ms-sm-3" href=""../index.html">
+            <img src="./assets/img/MainLogo.png" class="img-fluid logo" alt="Responsive Logo">
+          </a>
+          
+          
+          <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+            <ul class="navbar-nav ms-auto d-flex justify-content-center w-100">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/about-us.html"><b>About Us</b></a>
+              </li>
+
+              <!-- Services Dropdown -->
+              <li class="nav-item dropdown dropdown-hover mx-2 align-items-center">
+                <a class="nav-link ps-2 d-flex cursor-pointer align-items-center justify-content-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Services</b>
+                <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-md-2">
+                </a>
+                <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
+                <div class="d-none d-lg-block">
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service A</span>
+                  </a>
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service B</span>
+                  </a>
+                  <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                  <span>Service C</span>
+                  </a>
+                  <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                  <span>Service D</span>
+                  </a>
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service E</span>
+                  </a>
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service F</span>
+                  </a>
+                  <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                  <span>Service G</span>
+                  </a>
+                  <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                  <span>Service H</span>
+                  </a>
+                </div>
+                <div class="d-lg-none">
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service A</span>
+                  </a>
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service B</span>
+                  </a>
+                  <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                  <span>Service C</span>
+                  </a>
+                  <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                  <span>Service D</span>
+                  </a>
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service E</span>
+                  </a>
+                  <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                  <span>Service F</span>
+                  </a>
+                  <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                  <span>Service G</span>
+                  </a>
+                  <a href="./pages/author.html" class="dropdown-item border-radius-md">
+                  <span>Service H</span>
+                  </a>
+                </div>
+                </div>
+              </li>
+              
+
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/blogs.html"><b>Blogs</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/contact-us.html"><b>Contact Us</b></a>
+              </li>
+            </ul>
+
+            <!-- Social Media Icons (Mobile) -->
+            <div class="d-lg-none text-center social-icons-mobile">
+              <a href="tel:+919825328523" class="btn social-icon"><i class="fas fa-phone"></i></a>
+              <a href="mailto:kssheth@yahoo.com" class="btn social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <!-- Social Media Icons (Desktop) -->
+            <div class="d-none d-lg-flex ms-auto social-icons-desktop">
+              <a href="tel:+919825328523" class="btn mb-0 p-1 social-icon"><i class="fas fa-phone"></i></a>
+              <a href="mailto:kssheth@yahoo.com" class="btn mb-0 p-1 social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- End Navbar -->
+
+
+
+  
+
+
+
+
+
+  <!-- -------- START HEADER 4 w/ search book a ticket form ------- -->
+  <header>
+    <div class="page-header min-height-400" style="background-image: url('../assets/img/city-profile.jpg');" loading="lazy">
+      <span class="mask bg-gradient-dark opacity-8"></span>
+    </div>
+  </header>
+  <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
+    <!-- START Testimonials w/ user image & text & info -->
+    <section class="py-sm-7 py-5 position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mx-auto">
+            <div class="mt-n8 mt-md-n9 text-center">
+              <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="../assets/img/bruce-mars.jpg" alt="bruce" loading="lazy">
+            </div>
+            <div class="row py-5">
+              <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mx-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h3 class="mb-0">Michael Roven</h3>
+                  <div class="d-block">
+                    <button type="button" class="btn btn-sm btn-outline-info text-nowrap mb-0">Follow</button>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-auto">
+                    <span class="h6">323</span>
+                    <span>Posts</span>
+                  </div>
+                  <div class="col-auto">
+                    <span class="h6">3.5k</span>
+                    <span>Followers</span>
+                  </div>
+                  <div class="col-auto">
+                    <span class="h6">260</span>
+                    <span>Following</span>
+                  </div>
+                </div>
+                <p class="text-lg mb-0">
+                  Decisions: If you can’t decide, the answer is no.
+                  If two equally difficult paths, choose the one more
+                  painful in the short term (pain avoidance is creating
+                  an illusion of equality). Choose the path that leaves
+                  you more equanimous. <br><a href="javascript:;" class="text-info icon-move-right">More about me
+                    <i class="fas fa-arrow-right text-sm ms-1"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Testimonials w/ user image & text & info -->
+    <!-- START Blogs w/ 4 cards w/ image & text & link -->
+    <section class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="mb-5">Check my latest blogposts</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="card card-plain">
+              <div class="card-header p-0 position-relative">
+                <a class="d-block blur-shadow-image">
+                  <img src="../assets/img/examples/testimonial-6-2.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
+                </a>
+              </div>
+              <div class="card-body px-0">
+                <h5>
+                  <a href="javascript:;" class="text-dark font-weight-bold">Rover raised $65 million</a>
+                </h5>
+                <p>
+                  Finding temporary housing for your dog should be as easy as
+                  renting an Airbnb. That’s the idea behind Rover ...
+                </p>
+                <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card card-plain">
+              <div class="card-header p-0 position-relative">
+                <a class="d-block blur-shadow-image">
+                  <img src="../assets/img/examples/testimonial-6-3.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
+                </a>
+              </div>
+              <div class="card-body px-0">
+                <h5>
+                  <a href="javascript:;" class="text-dark font-weight-bold">MateLabs machine learning</a>
+                </h5>
+                <p>
+                  If you’ve ever wanted to train a machine learning model
+                  and integrate it with IFTTT, you now can with ...
+                </p>
+                <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card card-plain">
+              <div class="card-header p-0 position-relative">
+                <a class="d-block blur-shadow-image">
+                  <img src="../assets/img/examples/blog-9-4.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
+                </a>
+              </div>
+              <div class="card-body px-0">
+                <h5>
+                  <a href="javascript:;" class="text-dark font-weight-bold">MateLabs machine learning</a>
+                </h5>
+                <p>
+                  If you’ve ever wanted to train a machine learning model
+                  and integrate it with IFTTT, you now can with ...
+                </p>
+                <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
+                  <i class="fas fa-arrow-right text-xs ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-12">
+            <div class="card card-blog card-background cursor-pointer">
+              <div class="full-background" style="background-image: url('../assets/img/examples/blog2.jpg')" loading="lazy"></div>
+              <div class="card-body">
+                <div class="content-left text-start my-auto py-4">
+                  <h2 class="card-title text-white">Flexible work hours</h2>
+                  <p class="card-description text-white">Rather than worrying about switching offices every couple years, you stay in the same place.</p>
+                  <a href="javascript:;" class="text-white text-sm icon-move-right">Read More
+                    <i class="fas fa-arrow-right text-xs ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Blogs w/ 4 cards w/ image & text & link -->
+  </div>
+  <section class="py-lg-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card box-shadow-xl overflow-hidden mb-5">
+            <div class="row">
+              <div class="col-lg-5 position-relative bg-cover px-0" style="background-image: url('../assets/img/examples/blog2.jpg')" loading="lazy">
+                <div class="z-index-2 text-center d-flex h-100 w-100 d-flex m-auto justify-content-center">
+                  <div class="mask bg-gradient-dark opacity-8"></div>
+                  <div class="p-5 ps-sm-8 position-relative text-start my-auto z-index-2">
+                    <h3 class="text-white">Contact Information</h3>
+                    <p class="text-white opacity-8 mb-4">Fill up the form and our Team will get back to you within 24 hours.</p>
+                    <div class="d-flex p-2 text-white">
+                      <div>
+                        <i class="fas fa-phone text-sm"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm opacity-8">(+40) 772 100 200</span>
+                      </div>
+                    </div>
+                    <div class="d-flex p-2 text-white">
+                      <div>
+                        <i class="fas fa-envelope text-sm"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm opacity-8">hello@creative-tim.com</span>
+                      </div>
+                    </div>
+                    <div class="d-flex p-2 text-white">
+                      <div>
+                        <i class="fas fa-map-marker-alt text-sm"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm opacity-8">Dyonisie Wolf Bucharest, RO 010458</span>
+                      </div>
+                    </div>
+                    <div class="mt-4">
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Facebook">
+                        <i class="fab fa-facebook"></i>
+                      </button>
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </button>
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Dribbble">
+                        <i class="fab fa-dribbble"></i>
+                      </button>
+                      <button type="button" class="btn btn-icon-only btn-link text-white btn-lg mb-0" data-toggle="tooltip" data-placement="bottom" data-original-title="Log in with Instagram">
+                        <i class="fab fa-instagram"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <form class="p-3" id="contact-form" method="post">
+                  <div class="card-header px-4 py-sm-5 py-3">
+                    <h2>Say Hi!</h2>
+                    <p class="lead"> We'd like to talk with you.</p>
+                  </div>
+                  <div class="card-body pt-1">
+                    <div class="row">
+                      <div class="col-md-12 pe-2 mb-3">
+                        <div class="input-group input-group-static mb-4">
+                          <label>My name is</label>
+                          <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+                      </div>
+                      <div class="col-md-12 pe-2 mb-3">
+                        <div class="input-group input-group-static mb-4">
+                          <label>I'm looking for</label>
+                          <input type="text" class="form-control" placeholder="What you love">
+                        </div>
+                      </div>
+                      <div class="col-md-12 pe-2 mb-3">
+                        <div class="input-group input-group-static mb-4">
+                          <label>Your message</label>
+                          <textarea name="message" class="form-control" id="message" rows="6" placeholder="I want to say that..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 text-end ms-auto">
+                        <button type="submit" class="btn bg-gradient-info mb-0">Send Message</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <style>
+
+    /* Remove hover underline effect only in the footer */
+    .footer .nav-item .nav-link::after {
+        content: none !important;
+    }
+    
+    /* Footer-specific hover effect */
+    .footer .nav .nav-item {
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .footer .nav .nav-item:hover {
+        font-weight: bold;
+        font-size: 1.2em; /* Increase text size */
+        transform: scale(1.1); /* Slight zoom-in effect */
+    }
+    
+    </style>
+    <footer class="footer pt-5 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 mb-4 ms-auto">
+              <div>
+                <a href="https://www.creative-tim.com/product/material-kit">
+                  <img src="./assets/img/MainLogo.png" class="mb-2" alt="main_logo" style="width: 250px; margin-bottom: 10px;">
+                </a>
+                <h6 class="font-weight-bolder mb-2"></h6>
+              </div>
+              <div>
+                <p class="text-sm text-dark"><strong>ADDRESS:</strong><br>
+                  <i class="fas fa-map-marker-alt"></i> 204-208, Maurya Complex, Near C U Shah College,
+                  Off. Ashram Road, Incometax,
+                  Ahmedabad-380014
+                </p>
+                <p class="text-sm text-dark">
+                  <strong>CONTACT DETAILS</strong><br>
+                  <i class="fas fa-envelope"></i> Email: <a href="mailto:kssheth@yahoo.com">kssheth@yahoo.com</a><br>
+                  <i class="fas fa-phone"></i> (M): <a href="tel:+919825328523">+91-9825328523</a>, <a href="tel:+919974806510">9974806510</a>
+                </p>
+              </div>
+              <div>
+                <ul class="d-flex flex-row ms-n3 nav">
+                  <a href="https://www.linkedin.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-linkedin fa-2x text-dark"></i></a>
+                  <a href="https://www.facebook.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+                  <a href="https://www.instagram.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-instagram fa-2x text-dark"></i></a>
+                  <a href="https://www.twitter.com" class="btn p-1 mx-1 social-icon"><i class="fab fa-x-twitter fa-2x text-dark"></i></a>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="col-md-2 col-sm-6 col-6 mb-4">
+              <div>
+                <h6 class="text-sm">Company</h6>
+                <ul class="flex-column ms-n3 nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/about-us.html">About Us</a>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div>
+                <h6 class="text-sm">Resources</h6>
+                <ul class="flex-column ms-n3 nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/blogs.html">Blogs</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h6 class="text-sm">Help & Support</h6>
+                <ul class="flex-column ms-n3 nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/contact-us.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="col-md-2 col-sm-6 col-6 mb-4">
+              <div>
+                <h6 class="text-sm">Services</h6>
+                <ul class="flex-column ms-n3 nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service A</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service B</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service C</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service D</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service E</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service F</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service G</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/services.html">Service H</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+            <!-- Google Maps Section -->
+            <div class="col-md-4 col-sm-12 mb-4">
+              <h6 class="text-sm">Find Us</h6>
+              <div class="map-container">
+                <a href="https://www.google.com/maps/place/https://maps.app.goo.gl/Ep9mMgy9ZFhKTJYw5" target="_blank">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.193964292743!2d72.56709639581143!3d23.04291302398465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85006fa5affb%3A0xbc43d4f068d46568!2sKAUSHIK%20S.%20SHETH%20%26%20CO.%20CHARTERED%20ACCOUNTANTS!5e1!3m2!1sen!2sin!4v1742063361332!5m2!1sen!2sin" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </iframe>
+                </a>
+              </div>
+            </div>
+      
+            <div class="col-12">
+              <div class="text-center">
+                <p class="text-dark my-4 text-sm font-weight-normal">
+                  All rights reserved. Copyright © <span id="year"></span>  
+                  <a href="index.html" target="_blank"> KAUSHIK S. SHETH & CO.,  
+                    CHARTERED ACCOUNTANTS</a>.
+                </p>
+                <script>
+                  document.getElementById("year").textContent = new Date().getFullYear();
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src="../assets/js/material-kit.min.js?v=3.1.0" type="text/javascript"></script>
+</body>
+
+</html>
