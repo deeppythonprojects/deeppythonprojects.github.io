@@ -4,63 +4,117 @@
 
 @@include('blocks/page-title.htm', { "page-name": "Contact Us", "title": "Get in Touch" })
 
+<style>
+	#contact-form input,
+#contact-form textarea {
+  background-color: #f9f9f9;
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.15);
+  border-color: #343a40;
+}
+
+</style>
 <!-- contact form start -->
 <section class="contact-form-wrap section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-12 col-sm-12">
-				<form id="contact-form" class="contact__form" method="post" action="index.html">
-					<h3 class="text-md mb-4">Contact Form</h3>
-					<div class="form-group">
-						<input name="name" type="text" class="form-control" placeholder="Your Name" required>
-					</div>
-					<div class="form-group">
-						<input name="email" type="email" class="form-control" placeholder="Email Address" required>
-					</div>
-					<div class="form-group-2 mb-4">
-						<textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-					</div>
-					<button class="btn btn-main" name="submit" type="submit">Send Message</button>
-				</form>
+  <div class="container">
+    <div class="row">
+      
+      <!-- Updated Contact Form -->
+      <div class="col-lg-7 d-flex align-items-center">
+		<form class="p-4 w-100 bg-white rounded-4 shadow-sm" id="contact-form" action="https://formspree.io/f/xblgldna" method="post">
+		  <div class="row g-4">
+			<!-- Full Name -->
+			<div class="col-12">
+			  <label for="name" class="form-label fw-semibold">Full Name</label>
+			  <div class="input-group shadow-sm">
+				<span class="input-group-text bg-light border-0"><i class="fas fa-user"></i></span>
+				<input type="text" class="form-control border-0" name="name" id="name" placeholder="John Doe" required pattern="[A-Za-z\s]+">
+			  </div>
 			</div>
-
-			<div class="col-lg-5 col-sm-12">
-				<div class="contact-content pl-lg-5 mt-5 mt-lg-0">
-					<span class="text-muted">We are Professionals</span>
-					<h2 class="mb-5 mt-2">Don’t Hesitate to contact with us for any kind of information</h2>
-
-					<ul class="address-block list-unstyled">
-						<li>
-							<i class="ti-direction mr-3"></i>North Main Street,Brooklyn Australia
-						</li>
-						<li>
-							<i class="ti-email mr-3"></i>Email: contact@mail.com
-						</li>
-						<li>
-							<i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
-						</li>
-					</ul>
-
-					<ul class="social-icons list-inline mt-5">
-						<li class="list-inline-item">
-							<a href="http://www.themefisher.com"><i class="fab fa-facebook-f"></i></a>
-						</li>
-						<li class="list-inline-item">
-							<a href="http://www.themefisher.com"><i class="fab fa-twitter"></i></a>
-						</li>
-						<li class="list-inline-item">
-							<a href="http://www.themefisher.com"><i class="fab fa-linkedin-in"></i></a>
-						</li>
-					</ul>
-				</div>
+	  
+			<!-- Email -->
+			<div class="col-12">
+			  <label for="email" class="form-label fw-semibold">Email Address</label>
+			  <div class="input-group shadow-sm">
+				<span class="input-group-text bg-light border-0"><i class="fas fa-envelope"></i></span>
+				<input type="email" class="form-control border-0" name="email" id="email" placeholder="example@email.com" required>
+			  </div>
 			</div>
-		</div>
-	</div>
+	  
+			<!-- Mobile Number -->
+			<div class="col-12">
+			  <label for="phone" class="form-label fw-semibold">Mobile Number</label>
+			  <div class="input-group shadow-sm">
+				<span class="input-group-text bg-light border-0"><i class="fas fa-phone-alt"></i></span>
+				<input type="tel" class="form-control border-0" name="phone" id="phone" placeholder="10-digit number" required pattern="[0-9]{10}">
+			  </div>
+			</div>
+	  
+			<!-- Message -->
+			<div class="col-12">
+			  <label for="message" class="form-label fw-semibold">Your Message</label>
+			  <div class="input-group shadow-sm">
+				<span class="input-group-text bg-light border-0"><i class="fas fa-comment-alt"></i></span>
+				<textarea class="form-control border-0" name="message" id="message" rows="4" placeholder="Type your message here..." required></textarea>
+			  </div>
+			</div>
+	  
+			<!-- Submit Button -->
+			<div class="col-12">
+			  <button type="submit" class="btn btn-dark w-100 py-3 fw-bold shadow">
+				Send Message <i class="fas fa-paper-plane ms-2"></i>
+			  </button>
+			</div>
+		  </div>
+		</form>
+	  </div>
+	  
+
+      <!-- Updated Contact Info -->
+      <div class="col-lg-5 col-sm-12">
+        <div class="ps-lg-5 mt-5 mt-lg-0">
+          <img src="images/MainLogo.png" alt="Main Logo" class="img-fluid mb-4" style="max-width: 300px;">
+          <h2 class="mb-4">Reach out to us for any kind of information</h2>
+
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <i class="fas fa-map-marker-alt me-2 text-dark"></i>
+              <a href="https://www.google.com/maps/place/204-208+Maurya+Complex,+Ahmedabad-380014" class="text-decoration-none text-dark" target="_blank">
+                204-208, Maurya Complex, Near C U Shah College,<br>
+                Off. Ashram Road, Incometax, Ahmedabad-380014
+              </a>
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-envelope me-2 text-dark"></i>
+              <a href="mailto:kssheth@yahoo.com" class="text-decoration-none text-dark">kssheth@yahoo.com</a>
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-phone me-2 text-dark"></i>
+              <a href="tel:+919825328523" class="text-decoration-none text-dark me-3">+91 98253 28523</a>
+              <a href="tel:+919974806510" class="text-decoration-none text-dark">+91 99748 06510</a>
+            </li>
+          </ul>
+
+          <div class="mt-4">
+            <a href="#" class="me-3 text-dark"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="me-3 text-dark"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<div class="google-map">
-	<div id="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Megakit"></div>
-</div>
+<!-- Clean Black Bar -->
+<div class="w-100 bg-dark py-4 shadow"></div>
 
 @@include('blocks/footer.htm')
 
