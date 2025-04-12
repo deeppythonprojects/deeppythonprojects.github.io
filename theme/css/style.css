@@ -110,7 +110,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   transition: all 0.2s ease;
 }
 .btn-main:hover, .btn-small:hover, .btn-transparent:hover {
-  background: #f52626;
+  background: rgb(244.6818181818, 38.3181818182, 38.3181818182);
   color: #fff;
 }
 
@@ -169,11 +169,11 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .bg-primary-dark {
-  background: #f52626;
+  background: rgb(244.6818181818, 38.3181818182, 38.3181818182);
 }
 
 .bg-primary-darker {
-  background: #dd0b0b;
+  background: rgb(221.4545454545, 10.5454545455, 10.5454545455);
 }
 
 .bg-dark {
@@ -544,7 +544,7 @@ ul.dropdown-menu li {
     margin-bottom: 10px;
   }
   .dropleft .dropdown-menu,
-.dropright .dropdown-menu {
+  .dropright .dropdown-menu {
     margin-top: -10px;
   }
   .dropdown:hover > .dropdown-menu {
@@ -695,8 +695,7 @@ ul.dropdown-menu li {
   border-radius: 2px;
   text-align: center;
   transform: translateY(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
 
