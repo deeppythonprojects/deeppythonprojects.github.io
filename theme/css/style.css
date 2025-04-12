@@ -110,7 +110,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   transition: all 0.2s ease;
 }
 .btn-main:hover, .btn-small:hover, .btn-transparent:hover {
-  background: rgb(244.6818181818, 38.3181818182, 38.3181818182);
+  background: #000000;
   color: #fff;
 }
 
@@ -169,11 +169,11 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .bg-primary-dark {
-  background: rgb(244.6818181818, 38.3181818182, 38.3181818182);
+  background: rgb(30, 44, 197);
 }
 
 .bg-primary-darker {
-  background: rgb(221.4545454545, 10.5454545455, 10.5454545455);
+  background: rgb(38, 11, 132);
 }
 
 .bg-dark {
@@ -554,7 +554,7 @@ ul.dropdown-menu li {
   }
 }
 .bg-1 {
-  background: url("../images/bg/home-2.jpg") no-repeat 50% 50%;
+  background: url("../images/option_d.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -567,7 +567,7 @@ ul.dropdown-menu li {
   background: url("../images/bg/home-1.jpg") no-repeat;
   background-size: cover;
   background-position: 10% 0%;
-  padding: 200px 0;
+  padding: 150px 0;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -619,8 +619,8 @@ ul.dropdown-menu li {
   left: 0px;
   top: 0px;
   width: 45%;
-  min-height: 650px;
-  background: url("../images/about/home-8.jpg") no-repeat;
+  min-height: 550px;
+  background: url("../images/option_g.png") no-repeat;
   background-size: cover;
 }
 
@@ -725,7 +725,7 @@ ul.dropdown-menu li {
 }
 
 .cta {
-  background: url("../images/bg/home-3.jpg") fixed 50% 50%;
+  background: url("../images/option_e.png") fixed 50% 50%;
   background-size: cover;
   padding: 120px 0px;
 }
