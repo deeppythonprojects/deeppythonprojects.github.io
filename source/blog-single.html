@@ -1,98 +1,170 @@
 @@include('header.htm')
 
-@@include('blocks/navigation.htm',{"blog":"active", "blogSingle":"active"})
+@@include('blocks/navigation.htm', {"blog":"active"})
 
-@@include('blocks/page-title.htm', { "page-name": "News details", "title": "Blog Single" })
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	
+<style>
+	/* For carousel images */
+	.carousel-item img, .img-fluid.rounded.mb-4 {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
 
+	.custom-carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.custom-carousel-btn:hover {
+    background-color: #1c5984;
+}
+
+.carousel-control-prev.custom-carousel-btn {
+    left: 15px;
+}
+
+.carousel-control-next.custom-carousel-btn {
+    right: 15px;
+}
+.blog-wrap img {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #f5f5f5; /* Optional: background filler for empty space */
+	margin-bottom: 10px;
+}
+
+
+
+.custom-arrow {
+    font-size: 1.5rem;
+    color: white;
+}
+	</style>
+	
+	
 <section class="section blog-wrap bg-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8">
-				<div class="row">
-					<div class="col-lg-12 mb-5">
-						<div class="single-blog-item">
-							<img loading="lazy" src="images/blog/2.jpg" alt="blog" class="img-fluid rounded">
-
-							<div class="blog-item-content bg-white p-5">
-								<div class="blog-item-meta bg-gray pt-2 pb-1 px-3">
-									<span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> 28th January</span>
-								</div>
-
-								<h2 class="mt-3 mb-4">Improve design with typography?</h2>
-								<p class="lead mb-4">Non illo quas blanditiis repellendus laboriosam minima animi. Consectetur
-									accusantium pariatur repudiandae!</p>
-
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus natus, consectetur? Illum libero
-									vel nihil nisi quae, voluptatem, sapiente necessitatibus distinctio voluptates, iusto qui. Laboriosam
-									autem, nam voluptate in beatae.</p>
-
-								<h3 class="quote">A brand for a company is like a reputation for a person. You earn reputation by trying
-									to do hard things well.</h3>
-
-								<p class="lead mb-4 font-weight-normal text-black">The same is true as we experience the emotional
-									sensation of stress from our first instances of social rejection ridicule. We quickly learn to fear
-									and thus automatically.</p>
-
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, rerum beatae repellat tenetur
-									incidunt quisquam libero dolores laudantium. Nesciunt quis itaque quidem, voluptatem autem eos animi
-									laborum iusto expedita sapiente.</p>
-
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 mt-5 mt-lg-0">
-				<div class="sidebar-wrap">
-
-					<div class="sidebar-widget latest-post card border-0 p-4 mb-3">
-						<h5>Latest Posts</h5>
-
-						<div class="media border-bottom py-3">
-							<a href="#"><img loading="lazy" class="mr-4" src="images/blog/bt-3.jpg" alt="blog"></a>
-							<div class="media-body">
-								<h6 class="my-2"><a href="#">Thoughtful living in los Angeles</a></h6>
-								<span class="text-sm text-muted">03 Mar 2018</span>
-							</div>
-						</div>
-
-						<div class="media border-bottom py-3">
-							<a href="#"><img loading="lazy" class="mr-4" src="images/blog/bt-2.jpg" alt="blog"></a>
-							<div class="media-body">
-								<h6 class="my-2"><a href="#">Vivamus molestie gravida turpis.</a></h6>
-								<span class="text-sm text-muted">03 Mar 2018</span>
-							</div>
-						</div>
-
-						<div class="media py-3">
-							<a href="#"><img loading="lazy" class="mr-4" src="images/blog/bt-1.jpg" alt="blog"></a>
-							<div class="media-body">
-								<h6 class="my-2"><a href="#">Fusce lobortis lorem at ipsum semper sagittis</a></h6>
-								<span class="text-sm text-muted">03 Mar 2018</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="sidebar-widget bg-white rounded tags p-4 mb-3">
-						<h5 class="mb-4">Tags</h5>
-
-						<a href="#">Web</a>
-						<a href="#">agency</a>
-						<a href="#">company</a>
-						<a href="#">creative</a>
-						<a href="#">html</a>
-						<a href="#">Marketing</a>
-						<a href="#">Social Media</a>
-						<a href="#">Branding</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div id="blog-single-container" class="row justify-content-center">
+            <!-- Blog single content will be loaded here -->
+        </div>
+    </div>
 </section>
 
 @@include('blocks/footer.htm')
 
 @@include('footer.htm')
+
+	
+<script>
+// Google Sheet CSV URL
+const googleSheetURL = "https://docs.google.com/spreadsheets/d/1hlMnrqslpu_uDTolMksQ1V7R5lnQnfcrcqCwx5fCG6U/gviz/tq?tqx=out:csv";
+
+// Get ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const blogId = urlParams.get("id");
+
+// Fetch and render blog post
+fetch(googleSheetURL)
+    .then(res => res.text())
+    .then(csv => {
+        const blogs = parseCSV(csv);
+        const blog = blogs.find(b => b.id === blogId);
+        if (blog) {
+            renderBlog(blog);
+        } else {
+            document.getElementById("blog-single-container").innerHTML = "<p>Blog not found.</p>";
+        }
+    });
+
+function parseCSV(csvText) {
+    const rows = csvText.trim().split('\n');
+    const blogs = [];
+    const headers = rows[0].split(',');
+
+    for (let i = 1; i < rows.length; i++) {
+        const row = rows[i].match(/"([^"]*)"|[^,]+/g).map(val => val.replace(/(^"|"$)/g, ''));
+        if (row.length === headers.length) {
+            blogs.push({
+                id: row[0],
+                title: row[1],
+                category: row[2],
+                date: row[3],
+                image: row[4],      // Can be comma-separated for multiple images
+                content: row[5],
+                tags: row[6]
+            });
+        }
+    }
+    return blogs;
+}
+
+function renderBlog(blog) {
+    const container = document.getElementById("blog-single-container");
+
+    // Prepare images as carousel
+    const images = blog.image.split(',').map(img => img.trim());
+    let imageHTML = "";
+
+    if (images.length > 1) {
+        // Carousel
+        const carouselId = "carousel" + blog.id;
+        imageHTML = `
+            <div id="${carouselId}" class="carousel slide mb-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    ${images.map((img, idx) => `
+                        <div class="carousel-item ${idx === 0 ? 'active' : ''}">
+                            <img loading="lazy" src="${img}" class="d-block w-100 rounded" alt="Blog image ${idx + 1}">
+                        </div>
+                    `).join('')}
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+						<span class="fas fa-chevron-left"></span>
+
+					</button>
+					<button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+						<span class="fas fa-chevron-right"></span>
+
+					</button>
+            </div>
+        `;
+    } else {
+        // Single image
+        imageHTML = `<img loading="lazy" src="${images[0]}" class="img-fluid rounded mb-4" alt="Blog image">`;
+    }
+
+    container.innerHTML = `
+        <div class="col-lg-10">
+            ${imageHTML}
+            <h2 class="mb-3">${blog.title}</h2>
+            <div class="blog-item-meta bg-gray pt-2 pb-1 px-3 mb-3">
+                <span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-pencil-alt mr-2"></i>${blog.category}</span>
+                <span class="text-black text-capitalize d-inline-block mr-3"><i class="ti-time mr-1"></i>${blog.date}</span>
+            </div>
+            <div class="blog-content">
+                ${blog.content}
+            </div>
+            <div class="mt-4">
+                ${blog.tags ? blog.tags.split(',').map(tag => `
+                    <span class="badge bg-primary text-white me-1">${tag.trim()}</span>
+                `).join('') : ''}
+            </div>
+        </div>
+    `;
+}
+</script>
