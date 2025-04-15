@@ -21,8 +21,8 @@ var path = {
     images: "source/images/**/*.+(png|jpg|gif|svg)",
   },
   build: {
-    dirBuild: "theme/",
-    dirDev: "theme/",
+    dirBuild: "dist/",  // Output directory changed to 'dist'
+    dirDev: "dist/",    // Output directory changed to 'dist'
   },
 };
 
@@ -130,7 +130,7 @@ gulp.task("others:build", function () {
 
 // Clean Build Folder
 gulp.task("clean", function (cb) {
-  rimraf("./theme", cb);
+  rimraf("./dist", cb); // Clean the 'dist' folder
 });
 
 // Watch Task
