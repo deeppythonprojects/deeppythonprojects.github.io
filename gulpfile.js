@@ -26,7 +26,7 @@ var path = {
   },
 };
 
-// HTML
+// HTML Task
 gulp.task("html:build", function () {
   return gulp
     .src(path.src.html)
@@ -34,14 +34,6 @@ gulp.task("html:build", function () {
       fileinclude({
         basepath: path.src.incdir,
       })
-    )
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
     )
     .pipe(gulp.dest(path.build.dirDev))
     .pipe(
@@ -51,7 +43,7 @@ gulp.task("html:build", function () {
     );
 });
 
-// SCSS
+// SCSS Task
 gulp.task("scss:build", function () {
   return gulp
     .src(path.src.scss)
@@ -61,16 +53,8 @@ gulp.task("scss:build", function () {
         outputStyle: "expanded",
       }).on("error", sass.logError)
     )
-    .pipe(autoprefixer())
-    .pipe(sourcemaps.write("/"))
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
-    )
+    .pipe(autoprefixer()) // Ensures cross-browser compatibility
+    .pipe(sourcemaps.write("/")) // Create source maps for easier debugging
     .pipe(gulp.dest(path.build.dirDev + "css/"))
     .pipe(
       bs.reload({
@@ -79,18 +63,10 @@ gulp.task("scss:build", function () {
     );
 });
 
-// Javascript
+// Javascript Task
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
-    .pipe(
-      comments(`
-  WEBSITE: https://themefisher.com
-  TWITTER: https://twitter.com/themefisher
-  FACEBOOK: https://www.facebook.com/themefisher
-  GITHUB: https://github.com/themefisher/
-  `)
-    )
     .pipe(gulp.dest(path.build.dirDev + "js/"))
     .pipe(
       bs.reload({
@@ -99,7 +75,7 @@ gulp.task("js:build", function () {
     );
 });
 
-// Images
+// Images Task
 gulp.task("images:build", function () {
   return gulp
     .src(path.src.images)
@@ -111,7 +87,7 @@ gulp.task("images:build", function () {
     );
 });
 
-// Plugins
+// Plugins Task
 gulp.task("plugins:build", function () {
   return gulp
     .src(path.src.plugins)
@@ -123,7 +99,7 @@ gulp.task("plugins:build", function () {
     );
 });
 
-// Other files like favicon, php, sourcele-icon on root directory
+// Other Files Task (favicon, php, etc.)
 gulp.task("others:build", function () {
   return gulp.src(path.src.others).pipe(gulp.dest(path.build.dirDev));
 });
@@ -143,7 +119,7 @@ gulp.task("watch:build", function () {
   gulp.watch(path.src.plugins, gulp.series("plugins:build"));
 });
 
-// Dev Task
+// Development Task (with live reload)
 gulp.task(
   "default",
   gulp.series(
@@ -164,7 +140,7 @@ gulp.task(
   )
 );
 
-// Build Task
+// Build Task (for production)
 gulp.task(
   "build",
   gulp.series(
