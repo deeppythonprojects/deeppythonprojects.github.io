@@ -1,8 +1,8 @@
 {
-  "name": "megakit",
+  "name": "ksshethco",
   "version": "1.0.0",
-  "description": "megakit free multipurpose template",
-  "author": "Themefisher",
+  "description": "KS Sheth & Co. | Chartered Accountants - Professional Accounting, Audit, and Taxation Services",
+  "author": "KS Sheth & Co.",
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
@@ -24,5 +24,5 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
-  "homepage": "https://deeppythonprojects.github.io/deeppythonprojects.github.io"
+  "homepage": "https://ksshethco.com"
 }

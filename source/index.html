@@ -1,7 +1,19 @@
 @@include('header.htm')
 
 @@include('blocks/navigation.htm',{"home":"active"})
+<head><meta name="robots" content="index, follow"></head>
 
+<style>@media (max-width: 400px) {
+	body, html {
+	  overflow-x: hidden; /* Prevent horizontal overflow */
+	}
+  
+	.container, .row, .col-lg-12, .col-md-10, .col-md-6, .col-lg-9 {
+	  max-width: 100%; /* Ensure elements don't overflow */
+	  overflow-x: hidden;
+	}
+  }
+  </style>
 <!-- Slider Start -->
 <section class="slider">
 	<div class="container">
@@ -26,17 +38,17 @@
 <section class="section intro" style="margin-top: -40px;">
 	<div class="container">
 		<div class="row ">
-			<div class="col-lg-8">
+			<div class="col-lg-12">
 				<div class="section-title">
-					<span class="h6 text-color ">Expert Accounting & Audit Services in India</span><br>
-					<img src="images/MainLogo.png" alt="Main Logo" class="mt-3 img-fluid" style="max-width: 350px;">
-					<h2 class="mt-3 content-title">Offering expert financial and advisory solutions, since <strong>1994</strong>.
+					<img src="images/Cropped.png" alt="Main Logo" class="mt-3 img-fluid" style="max-width: 350px;">
+					
+					<h2 class="mt-3">Offering expert financial and advisory solutions, since <strong>1994</strong>.
 					</h2>
 				</div>
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			<p style="margin-top: -40px;">We are one of the senior chartered accountant firms, which has vast experience and strong standing of almost 30 years in the industry. We provide expert and professional services with that extra personal touch which makes our goodwill strong. Our work horizons are successfully spread across Gujarat in various cities.</p>
+		<div class="row justify-content-center col-lg-12">
+			<p style="margin-top: -40px;">We are one of the senior chartered accountant firms, which has vast experience and strong standing for more than 30 years in the industry. We provide expert and professional services with that extra personal touch which makes our goodwill strong. Our work horizons are successfully spread across Gujarat in various cities.</p>
 		</div>
 	</div>
 </section>
@@ -44,16 +56,15 @@
 <!-- Section Intro END -->
 <!-- Section About Start -->
 
-<section class="section about position-relative" style="margin-top: -40px;">
+<section class="section about position-relative" style="margin-top: -40px; margin-bottom: 20px;">
 	<div class="bg-about"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-6 offset-md-0">
 				<div class="about-item ">
-					<span class="h6 text-color" style="margin-top: -20px;">Driven by Values, Defined by Quality</span>
-					<h2 class="mt-3 mb-4 position-relative content-title">Reasons that differentiate us from others</h2>
+					<span class="h6 text-color" style="margin-top: -20px; margin-left: 20px;">Driven by Values, Defined by Quality</span>
 					<div class="about-content">
-						<h4 class="mb-3 position-relative">Factors</h4>
+						<h2 class="mb-3 position-relative">Key Differentiators</h2>
 						<ul>
 							<li>Comprehensive range of services</li>
 							<li>Industry specialization</li>
@@ -71,7 +82,7 @@
 <!-- Section About End -->
 <!--  Section Services Start -->
 <section class="section service border-top py-5">
-	<div class="container">
+	<div class="container col-lg-10 col-md-10">
 	  <div class="row justify-content-center">
 		<div class="col-lg-7 text-center">
 		  <div class="section-title">
@@ -175,26 +186,9 @@
   
 <!--  Section Services End -->
 
-<!-- Section Cta Start -->
-<section class="section cta">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-7 col-lg-6">
-				<div class="cta-item  bg-white p-5 rounded">
-					<span class="h6 text-color">Serving since 30+ years</span>
-					<h2 class="mt-2 mb-4">Trusted Chartered Accountants with Decades of Experiences</h2>
-					<p class="lead mb-4">Founded in 1994 in Ahmedabad, Kaushik S. Sheth & Co. has grown into one of Gujarat’s most experienced CA firms. With nearly 30 years of trusted service, we combine expertise with a personal approach, serving clients across Ahmedabad, Gandhinagar, Kalol, Mehsana, Anand, and Nadiad.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!--  Section Cta End-->
+
 <!-- Section Testimonial Start -->
-<section class="section testimonial">
-	
-</section>
+
 <!-- Section Testimonial End -->
 <section class="section latest-blog bg-2">
 	<div class="container">
