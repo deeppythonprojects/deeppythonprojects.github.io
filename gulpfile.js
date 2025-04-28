@@ -21,12 +21,12 @@ var path = {
     images: "source/images/**/*.+(png|jpg|gif|svg)",
   },
   build: {
-    dirBuild: "dist/",  // Output directory changed to 'dist'
-    dirDev: "dist/",    // Output directory changed to 'dist'
+    dirBuild: "theme/",
+    dirDev: "theme/",
   },
 };
 
-// HTML Task
+// HTML
 gulp.task("html:build", function () {
   return gulp
     .src(path.src.html)
@@ -34,6 +34,14 @@ gulp.task("html:build", function () {
       fileinclude({
         basepath: path.src.incdir,
       })
+    )
+    .pipe(
+      comments(`
+    WEBSITE: https://themefisher.com
+    TWITTER: https://twitter.com/themefisher
+    FACEBOOK: https://www.facebook.com/themefisher
+    GITHUB: https://github.com/themefisher/
+    `)
     )
     .pipe(gulp.dest(path.build.dirDev))
     .pipe(
@@ -43,7 +51,7 @@ gulp.task("html:build", function () {
     );
 });
 
-// SCSS Task
+// SCSS
 gulp.task("scss:build", function () {
   return gulp
     .src(path.src.scss)
@@ -53,8 +61,16 @@ gulp.task("scss:build", function () {
         outputStyle: "expanded",
       }).on("error", sass.logError)
     )
-    .pipe(autoprefixer()) // Ensures cross-browser compatibility
-    .pipe(sourcemaps.write("/")) // Create source maps for easier debugging
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write("/"))
+    .pipe(
+      comments(`
+    WEBSITE: https://themefisher.com
+    TWITTER: https://twitter.com/themefisher
+    FACEBOOK: https://www.facebook.com/themefisher
+    GITHUB: https://github.com/themefisher/
+    `)
+    )
     .pipe(gulp.dest(path.build.dirDev + "css/"))
     .pipe(
       bs.reload({
@@ -63,10 +79,18 @@ gulp.task("scss:build", function () {
     );
 });
 
-// Javascript Task
+// Javascript
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
+    .pipe(
+      comments(`
+  WEBSITE: https://themefisher.com
+  TWITTER: https://twitter.com/themefisher
+  FACEBOOK: https://www.facebook.com/themefisher
+  GITHUB: https://github.com/themefisher/
+  `)
+    )
     .pipe(gulp.dest(path.build.dirDev + "js/"))
     .pipe(
       bs.reload({
@@ -75,7 +99,7 @@ gulp.task("js:build", function () {
     );
 });
 
-// Images Task
+// Images
 gulp.task("images:build", function () {
   return gulp
     .src(path.src.images)
@@ -87,7 +111,7 @@ gulp.task("images:build", function () {
     );
 });
 
-// Plugins Task
+// Plugins
 gulp.task("plugins:build", function () {
   return gulp
     .src(path.src.plugins)
@@ -99,14 +123,14 @@ gulp.task("plugins:build", function () {
     );
 });
 
-// Other Files Task (favicon, php, etc.)
+// Other files like favicon, php, sourcele-icon on root directory
 gulp.task("others:build", function () {
   return gulp.src(path.src.others).pipe(gulp.dest(path.build.dirDev));
 });
 
 // Clean Build Folder
 gulp.task("clean", function (cb) {
-  rimraf("./dist", cb); // Clean the 'dist' folder
+  rimraf("./theme", cb);
 });
 
 // Watch Task
@@ -119,7 +143,7 @@ gulp.task("watch:build", function () {
   gulp.watch(path.src.plugins, gulp.series("plugins:build"));
 });
 
-// Development Task (with live reload)
+// Dev Task
 gulp.task(
   "default",
   gulp.series(
@@ -140,7 +164,7 @@ gulp.task(
   )
 );
 
-// Build Task (for production)
+// Build Task
 gulp.task(
   "build",
   gulp.series(
