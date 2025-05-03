@@ -55,7 +55,6 @@
 
 <body>
 
-
 <!-- Header Start -->
 
 <header class="navigation">
@@ -128,7 +127,6 @@
 </header>
 <!-- Header Close -->
 
-
 <section class="page-title bg-1">
   <div class="container">
     <div class="row">
@@ -146,19 +144,21 @@
     </div>
   </div>
 </section>
+
 <head>
   <meta name="description" content="Browse through resources, including articles and insights, on various topics such as taxes, financing, and consultancy.">
-<meta name="keywords" content="resources, blog, articles, tax insights, consultancy resources, business articles">
-<meta name="author" content="K.S. Sheth & Co.">
-<meta property="og:title" content="Resources - K.S. Sheth & Co.">
-<meta property="og:description" content="Explore our resources section for valuable articles and insights on business consultancy, tax planning, and more.">
-<meta property="og:image" content="https://www.ksshethco.com/images/MainLogo.png">
-<meta property="og:url" content="https://www.ksshethco.com/blog-grid.html">
-<meta name="robots" content="index, follow">
-
+  <meta name="keywords" content="resources, blog, articles, tax insights, consultancy resources, business articles">
+  <meta name="author" content="K.S. Sheth & Co.">
+  <meta property="og:title" content="Resources - K.S. Sheth & Co.">
+  <meta property="og:description" content="Explore our resources section for valuable articles and insights on business consultancy, tax planning, and more.">
+  <meta property="og:image" content="https://www.ksshethco.com/images/logo_1.jpg">
+  <meta property="og:url" content="https://www.ksshethco.com/blog-grid.html">
+  <meta name="robots" content="index, follow">
 </head>
+
 <!-- Bootstrap JS for carousel -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <section class="section blog-wrap bg-gray">
   <div class="container">
@@ -265,6 +265,9 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
       </script>
         </div>
+        <div class="col-lg-8" style="font-size: small;">
+          Developed by: <strong><a href="https://www.linkedin.com/in/deep-m-bhatt-59b014262/" target="_blank" class="text-decoration-none">Deep M. Bhatt</a></strong>
+        </div>
       </div>
     </div>
   </div>
@@ -327,36 +330,37 @@ Essential Scripts
   }
 
   .custom-carousel-btn {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
+    top: calc(50% - 20px);
     position: absolute;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    opacity: 0.7;
   }
 
   .custom-carousel-btn:hover {
     background-color: #1c5984;
+    opacity: 1;
   }
 
   .carousel-control-prev.custom-carousel-btn {
-    left: 15px;
+    left: 10px;
   }
 
   .carousel-control-next.custom-carousel-btn {
-    right: 15px;
+    right: 10px;
   }
 
-  .custom-arrow {
-    font-size: 1.5rem;
-    color: white;
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 100% 100%;
   }
 </style>
 
@@ -386,7 +390,7 @@ Essential Scripts
     const data = [];
 
     for (let i = 1; i < rows.length; i++) {
-      const row = rows[i].match(/"([^"]*)"|[^,]+/g).map(val => val.replace(/(^"|"$)/g, ''));
+      const row = rows[i].match(/"([^"]*)"|[^,]+/g).map(val => val.replace(/^"|"$/g, ''));
       if (row.length === headers.length) {
         data.push({
           id: row[0],
@@ -406,7 +410,6 @@ Essential Scripts
   function renderPagination(currentPage) {
     const totalPages = Math.ceil(blogs.length / blogsPerPage);
     const paginationContainer = document.getElementById("pagination");
-
     paginationContainer.innerHTML = '';
 
     for (let i = 1; i <= totalPages; i++) {
@@ -424,6 +427,7 @@ Essential Scripts
     const start = (currentPage - 1) * blogsPerPage;
     const end = start + blogsPerPage;
     renderBlogs(blogs.slice(start, end));
+    setTimeout(() => initializeCarousels(), 0);
   }
 
   function renderBlogs(blogSubset) {
@@ -435,17 +439,17 @@ Essential Scripts
       return;
     }
 
-    blogSubset.forEach((blog, index) => {
+    blogSubset.forEach((blog) => {
       const blogItem = document.createElement("div");
       blogItem.classList.add("col-lg-6", "col-md-6", "mb-5");
 
-      const images = blog.image.split(',').map(url => url.trim()).filter(url => url.length > 0);
+      const images = blog.image.split(', ').map(url => url.trim()).filter(url => url.length > 0);
       let imageCarouselHTML = '';
 
       if (images.length > 1) {
         const carouselId = `carousel-${blog.id}`;
         imageCarouselHTML = `
-          <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
+          <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-inner">
               ${images.map((img, i) => `
                 <div class="carousel-item ${i === 0 ? 'active' : ''}">
@@ -453,10 +457,10 @@ Essential Scripts
                 </div>`).join('')}
             </div>
             <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
-              <span class="fas fa-chevron-left"></span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </button>
             <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
-              <span class="fas fa-chevron-right"></span>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
           </div>
         `;
@@ -480,6 +484,21 @@ Essential Scripts
       `;
 
       blogContainer.appendChild(blogItem);
+    });
+
+    // Initialize carousels after all blog items are rendered
+    initializeCarousels();
+  }
+
+  function initializeCarousels() {
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+      $(carousel).carousel({
+        interval: 5000,
+        ride: 'carousel',
+        pause: false,
+        wrap: true
+      });
     });
   }
 
