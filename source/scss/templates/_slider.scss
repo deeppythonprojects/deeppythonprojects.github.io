@@ -4,6 +4,8 @@
   background-position: 10% 0%;
   padding:200px 0;
   position: relative;
+  max-width: 100%;
+  overflow-x:hidden;
   @include tablet {
     padding:150px 0;
   }
@@ -14,7 +16,10 @@
       line-height: 80px;
       font-weight: 600;
       color: $light;
-
+      max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+      
     }
     p{
       margin-bottom:30px;
@@ -22,10 +27,14 @@
       font-size: 18px;
       line-height: 27px;
       font-weight: 300;
+      max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
     }
 
     span{
       letter-spacing: 1px;
     }
   }
+  
 }

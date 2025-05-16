@@ -50,15 +50,32 @@
 		<div class="row ">
 			<div class="col-lg-12">
 				<div class="section-title">
-					<img src="images/Cropped.png" alt="Main Logo" class="mt-3 img-fluid" style="max-width: 350px;">
-					
-					<h2 class="mt-3">Offering expert financial and advisory solutions, since <strong>1994</strong>.
+                    <img src="images/Cropped.png" alt="Main Logo" class="mt-3 img-fluid" style="max-width: 30%; width: 100%; max-width: 350px;">
+                    <h2 class="mt-3" style="margin-bottom: -40px;" id="dynamic-margin">
+                        Offering expert financial and advisory solutions, since <strong>1994</strong>.
+                    </h2>
+                    <script>
+                        function adjustMargin() {
+                            const element = document.getElementById('dynamic-margin');
+                            if (window.innerWidth <= 768) { // Mobile view
+                                element.style.marginBottom = '-50px';
+                            } else { // Desktop view
+                                element.style.marginBottom = '-40px';
+                            }
+                        }
+
+                        // Adjust margin on page load and window resize
+                        window.addEventListener('load', adjustMargin);
+                        window.addEventListener('resize', adjustMargin);
+                    </script>
 					</h2>
 				</div>
 			</div>
 		</div>
 		<div class="row justify-content-center col-lg-12">
-			<p style="margin-top: -40px;">We are one of the senior chartered accountant firms, which has vast experience and strong standing for more than 30 years in the industry. We provide expert and professional services with that extra personal touch which makes our goodwill strong. Our work horizons are successfully spread across Gujarat in various cities.</p>
+            <p class="description-text">
+                We are one of the senior chartered accountant firms, which has vast experience and strong standing for more than 30 years in the industry. We provide expert and professional services with that extra personal touch which makes our goodwill strong. Our work horizons are successfully spread across Gujarat in various cities.
+            </p>
 		</div>
 	</div>
 </section>
@@ -74,8 +91,8 @@
 				<div class="about-item ">
 					<span class="h6 text-color" style="margin-top: -20px; margin-left: 20px;">Driven by Values, Defined by Quality</span>
 					<div class="about-content">
-						<h2 class="mb-3 position-relative">Key Differentiators</h2>
-						<ul>
+						<h2 class="mb-3 position-relative" style="margin-left: -40px;">Key Differentiators</h2>
+						<ul style="margin-left: -40px;">
 							<li>Comprehensive range of services</li>
 							<li>Industry specialization</li>
 							<li>Easy access to partner-level advice</li>
@@ -287,6 +304,15 @@
             .blog-card-small .carousel-indicators .active {
                 background-color: black;
             }
+            body {
+  outline: 5px solid green;
+  overflow-x: hidden;
+}
+
+.blog-card-small {
+  outline: 3px dashed blue;
+}
+
         </style>
         <div class="row justify-content-center" id="blog-list">
             </div>
