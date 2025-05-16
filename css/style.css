@@ -49,6 +49,10 @@ p {
   line-height: 30px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .navbar-toggle .icon-bar {
   background: #1c5984;
 }
@@ -597,6 +601,8 @@ ul.dropdown-menu li {
   background-position: 10% 0%;
   padding: 200px 0;
   position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
   .slider {
@@ -608,6 +614,9 @@ ul.dropdown-menu li {
   line-height: 80px;
   font-weight: 600;
   color: #fff;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .slider .block p {
   margin-bottom: 30px;
@@ -615,6 +624,9 @@ ul.dropdown-menu li {
   font-size: 18px;
   line-height: 27px;
   font-weight: 300;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .slider .block span {
   letter-spacing: 1px;
