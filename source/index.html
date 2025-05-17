@@ -73,7 +73,7 @@
 			</div>
 		</div>
 		<div class="row justify-content-center col-lg-12">
-            <p class="description-text">
+            <p class="description-text" style="text-align: justify;">
                 We are one of the senior chartered accountant firms, which has vast experience and strong standing for more than 30 years in the industry. We provide expert and professional services with that extra personal touch which makes our goodwill strong. Our work horizons are successfully spread across Gujarat in various cities.
             </p>
 		</div>
@@ -114,7 +114,7 @@
 		<div class="col-lg-7 text-center">
 		  <div class="section-title">
 			<span class="h6 text-color">Our Services</span>
-			<h2 class="mt-3 content-title">We provide a wide range of creative services</h2>
+			<h2 class="mt-3 content-title">We provide a wide range of professional services</h2>
 		  </div>
 		</div>
 	  </div>
@@ -309,9 +309,6 @@
   overflow-x: hidden;
 }
 
-.blog-card-small {
-  outline: 3px dashed blue;
-}
 
         </style>
         <div class="row justify-content-center" id="blog-list">
@@ -321,7 +318,6 @@
                 <div id="pagination"></div>
             </div>
         </div>
-    </div>
 
 <script>
     const googleSheetURL = "https://docs.google.com/spreadsheets/d/1hlMnrqslpu_uDTolMksQ1V7R5lnQnfcrcqCwx5fCG6U/gviz/tq?tqx=out:csv";
@@ -389,66 +385,65 @@
     }
 
     function renderBlogs(blogSubset) {
-        const blogContainer = document.getElementById("blog-list");
-        blogContainer.innerHTML = '';
+    const blogContainer = document.getElementById("blog-list");
+    blogContainer.innerHTML = '';
 
-        if (blogSubset.length === 0) {
-            blogContainer.innerHTML = `<p class="text-center text-white">No blogs found.</p>`;
-            return;
-        }
+    if (blogSubset.length === 0) {
+        blogContainer.innerHTML = `<p class="text-center text-white">No blogs found.</p>`;
+        return;
+    }
 
-        blogSubset.forEach((blog) => {
-            const blogItem = document.createElement("div");
-            blogItem.classList.add("col-lg-4", "col-md-6", "mb-4"); // Adjust column classes for desired layout
+    blogSubset.forEach((blog) => {
+        const blogItem = document.createElement("div");
+        blogItem.classList.add("col-lg-4", "col-md-6", "mb-4");
 
-            const images = blog.image.split(',').map(url => url.trim()).filter(url => url.length > 0);
-            let imageCarouselHTML = '';
+        const images = blog.image.split(',').map(url => url.trim()).filter(url => url.length > 0);
+        let imageCarouselHTML = '';
 
-            if (images.length > 1) {
-                const carouselId = `carousel-${blog.id}`;
-                imageCarouselHTML = `
-                    <div id="${carouselId}" class="carousel slide blog-image-carousel" data-ride="carousel" data-interval="7000">
-                        <ol class="carousel-indicators"></ol>
-                        <div class="carousel-inner">
-                            ${images.map((img, i) => `
-                                <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                                    <img src="${img}" class="d-block w-100" alt="Blog image ${i + 1}">
-                                </div>`).join('')}
-                        </div>
-                        <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+        if (images.length > 1) {
+            const carouselId = `carousel-${blog.id}`;
+            imageCarouselHTML = `
+                <div id="${carouselId}" class="carousel slide blog-image-carousel" data-ride="carousel" data-interval="7000">
+                    <ol class="carousel-indicators"></ol>
+                    <div class="carousel-inner">
+                        ${images.map((img, i) => `
+                            <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                                <img src="${img}" class="d-block w-100" alt="Blog image ${i + 1}">
+                            </div>`).join('')}
                     </div>
-                `;
-            } else {
-                imageCarouselHTML = `<img src="${images[0]}" class="img-fluid" alt="Blog Image">`;
-            }
-
-            blogItem.innerHTML = `
-                <div class="blog-card-small h-100">
-                    <div class="blog-image-carousel">
-                        ${imageCarouselHTML}
-                    </div>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                        <h3 class="card-title">${blog.title}</h3>
-                        <a href="blog-single.html?id=${blog.id}" class="btn btn-small btn-solid-border btn-round-full text-white btn-learn-more">Learn More</a>
-                    </div>
+                    <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             `;
+        } else {
+            imageCarouselHTML = `<img src="${images[0]}" class="img-fluid" alt="Blog Image">`;
+        }
 
-            blogContainer.appendChild(blogItem);
+        blogItem.innerHTML = `
+            <div class="blog-card-small h-100">
+                <div class="blog-image-carousel">
+                    ${imageCarouselHTML}
+                </div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="card-title">${blog.title}</h3>
+                    <a href="blog-single.html?id=${blog.id}" class="btn btn-small btn-solid-border btn-round-full text-white btn-learn-more">Learn More</a>
+                </div>
+            </div>
+        `;
 
-            // Initialize carousels after blogs are rendered
-            $(document).ready(function() {
-                $(`#${carouselId}.blog-image-carousel.slide`).carousel();
-            });
-        });
-    }
+        blogContainer.appendChild(blogItem);
+    });
+
+    // Initialize all carousels after rendering
+    $('.carousel').carousel();
+}
+
 
     fetchBlogData();
 </script>
